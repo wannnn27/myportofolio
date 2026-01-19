@@ -1,0 +1,163 @@
+.certificates {
+    background: var(--dark-900);
+    overflow: hidden;
+    /* Prevent horizontal scrollbar on body */
+}
+
+.container-fluid {
+    width: 100%;
+    padding: 0;
+    max-width: 100vw;
+}
+
+.certificates-scroll-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 40px 0;
+    mask-image: linear-gradient(to right,
+            transparent,
+            black 10%,
+            black 90%,
+            transparent);
+}
+
+.certificates-track {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+    padding-left: 30px;
+    /* Initial offset */
+}
+
+.certificates-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 15px));
+        /* Scroll half way (single set width) */
+    }
+}
+
+.certificate-card {
+    position: relative;
+    width: 320px;
+    background: var(--dark-800);
+    border: 1px solid rgba(45, 212, 191, 0.1);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: var(--transition-normal);
+    flex-shrink: 0;
+    user-select: none;
+}
+
+.certificate-card:hover {
+    border-color: var(--mint-400);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(45, 212, 191, 0.15);
+    z-index: 2;
+}
+
+.cert-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background: var(--dark-700);
+    overflow: hidden;
+}
+
+.cert-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.certificate-card:hover .cert-image img {
+    transform: scale(1.1);
+}
+
+.cert-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(13, 18, 16, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(2px);
+}
+
+.certificate-card:hover .cert-overlay {
+    opacity: 1;
+}
+
+.view-btn {
+    padding: 10px 24px;
+    background: var(--mint-400);
+    color: var(--dark-900);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: var(--radius-full);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.certificate-card:hover .view-btn {
+    transform: translateY(0);
+}
+
+.cert-content {
+    padding: 20px;
+}
+
+.cert-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cert-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--gray-400);
+}
+
+.cert-dot {
+    color: var(--mint-400);
+}
+
+.cert-year {
+    color: var(--mint-400);
+    font-weight: 600;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .certificates-track {
+        animation: scroll 30s linear infinite;
+        gap: 20px;
+    }
+
+    .certificate-card {
+        width: 280px;
+    }
+
+    .cert-image {
+        height: 180px;
+    }
+}
