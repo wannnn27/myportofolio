@@ -5,6 +5,8 @@
     position: relative;
     overflow: hidden;
     padding-top: 80px;
+    padding-bottom: 80px;
+    /* Tambahan agar konten agak naik secara visual dari bawah */
 }
 
 .hero-bg {
@@ -53,14 +55,16 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    padding: 8px 16px;
+    padding: 4px 12px;
     background: linear-gradient(135deg, rgba(45, 212, 191, 0.15) 0%, rgba(45, 212, 191, 0.05) 100%);
     border: 1px solid rgba(45, 212, 191, 0.3);
     border-radius: var(--radius-full);
-    font-size: 0.8rem;
+    font-size: 0.65rem;
     font-weight: 600;
     color: var(--mint-400);
     margin-bottom: 24px;
+    margin-top: 30px;
+    /* Tambahan jarak dari navbar */
     letter-spacing: 0.5px;
     text-transform: uppercase;
     box-shadow: 0 0 20px rgba(45, 212, 191, 0.15);
@@ -84,7 +88,7 @@
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
     font-weight: 800;
     color: var(--white);
     line-height: 1.1;
@@ -93,7 +97,7 @@
 
 .hero-tagline {
     display: block;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--mint-400);
     font-weight: 500;
     letter-spacing: 0.5px;
@@ -101,7 +105,7 @@
 }
 
 .hero-subtitle {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: var(--gray-300);
     margin-bottom: 16px;
 }
@@ -117,11 +121,11 @@
 }
 
 .hero-description {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--gray-400);
-    max-width: 500px;
+    max-width: 480px;
     margin-bottom: 32px;
-    line-height: 1.8;
+    line-height: 1.6;
 }
 
 .hero-buttons {
@@ -137,14 +141,16 @@
 }
 
 .social-link {
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 42px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(45, 212, 191, 0.1);
+    background: rgba(45, 212, 191, 0.05);
+    /* Sedikit lebih transparan */
     border: 1px solid rgba(45, 212, 191, 0.2);
-    border-radius: var(--radius-md);
+    border-radius: 50%;
+    /* Jadi lingkaran */
     color: var(--mint-400);
     transition: var(--transition-normal);
 }
@@ -166,8 +172,8 @@
 
 .image-wrapper {
     position: relative;
-    width: 380px;
-    height: 380px;
+    width: 320px;
+    height: 320px;
 }
 
 .image-glow {
@@ -262,31 +268,31 @@
 
 @keyframes orbit1 {
     from {
-        transform: rotate(0deg) translateX(240px) rotate(0deg);
+        transform: rotate(0deg) translateX(200px) rotate(0deg);
     }
 
     to {
-        transform: rotate(360deg) translateX(240px) rotate(-360deg);
+        transform: rotate(360deg) translateX(200px) rotate(-360deg);
     }
 }
 
 @keyframes orbit2 {
     from {
-        transform: rotate(120deg) translateX(240px) rotate(-120deg);
+        transform: rotate(120deg) translateX(200px) rotate(-120deg);
     }
 
     to {
-        transform: rotate(480deg) translateX(240px) rotate(-480deg);
+        transform: rotate(480deg) translateX(200px) rotate(-480deg);
     }
 }
 
 @keyframes orbit3 {
     from {
-        transform: rotate(240deg) translateX(240px) rotate(-240deg);
+        transform: rotate(240deg) translateX(200px) rotate(-240deg);
     }
 
     to {
-        transform: rotate(600deg) translateX(240px) rotate(-600deg);
+        transform: rotate(600deg) translateX(200px) rotate(-600deg);
     }
 }
 
