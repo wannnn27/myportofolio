@@ -1,16 +1,56 @@
-# React + Vite
+# My Personal Portfolio 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Halo gess! 👋 Selamat datang di repository source code website portofolio gue.
 
-Currently, two official plugins are available:
+Sebagai mahasiswa Sistem Informasi yang lagi mendalami dunia **Data Science** dan **AI**, gue butuh tempat buat *showcase* project-project hasil begadang gue biar keliatan lebih profesional (dan siapa tau dilirik recruiter yekan).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Website ini gue bangun pake **React** + **Vite** biar performanya ngebut, styling pake **CSS native** aja biar ringan, plus ada animasi-animasi dikit biar gak kaku kayak kanebo kering.
 
-## React Compiler
+## ✨ Fitur-fitur Kece
+- **Hero Section**: Ada foto profil gue dengan badge skill (Machine Learning, AI, Data Scientist) yang muter-muter kayak satelit.
+- **About Me**: Sedikit *story telling* tentang perjalanan gue dari mahasiswa biasa sampe jadi AI enthusiast.
+- **Projects**: Etalase project kebanggaan gue kayak **Sastrafy**, **Factify**, dan **Semarang Resto Dashboard**.
+- **Certificates**: Wall of fame sertifikat gue (Microsoft, Dicoding, dll) biar valid no debat.
+- **Responsive**: Aman dibuka di HP sambil rebahan atau di laptop pas lagi produktif.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
+Ini alat tempur yang gue pake buat bikin web ini:
+- **Frontend**: React.js 18
+- **Build Tool**: Vite (kenceng parah)
+- **Styling**: Vanilla CSS 3 (Flexbox, Grid, CSS Variables)
+- **Deployment**: Vercel (Support domain .my.id)
 
-## Expanding the ESLint configuration
+## 🏃‍♂️ Cara Jalanin di Laptop Lo
+Buat lo yang mau liat kodenya atau mau jadiin referensi tugas kuliah, gass aja:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Clone dulu reponya:**
+   ```bash
+   git clone https://github.com/wannnn27/myportofolio.git
+   ```
+
+2. **Masuk ke folder project:**
+   ```bash
+   cd myportofolio
+   ```
+
+3. **Install dependencies (pastiin udah install Node.js ya):**
+   ```bash
+   npm install
+   ```
+
+4. **Jalanin server lokal:**
+   ```bash
+   npm run dev
+   ```
+
+5. **Buka browser:**
+   Langsung meluncur ke `http://localhost:5173`.
+
+## 🤝 Let's Connect!
+Kalo mau ngajak kolab, diskusi soal AI, atau sekadar curhat soal coding error, bisa kontak gue di:
+- **GitHub**: [wannnn27](https://github.com/wannnn27)
+- **LinkedIn**: [Adi Arwan Syah](https://www.linkedin.com/in/adi-arwan-syah/)
+- **Instagram**: [@adiarwansyah_](https://instagram.com/adiarwansyah_)
+
+---
+*Dibuat dengan ❤️ dan kopi sachet ☕.*
