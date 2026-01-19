@@ -1,1 +1,1 @@
-intinya ni portofolio saya bang
+intinya ini portofolio saya 
