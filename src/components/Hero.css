@@ -520,7 +520,8 @@
     .hero {
         padding-top: 90px;
         overflow-x: hidden;
-        /* Prevent horizontal scroll from flying badges */
+        padding-bottom: 40px;
+        /* Space for scroll indicator flow */
     }
 
     .hero-title {
@@ -544,10 +545,29 @@
         height: 220px;
     }
 
-    /* Smaller orbit radius for phones so badges don't fly off screen */
-    /* We override the previous keyframes or just use smaller translate values works too if we define new ones. 
-       Reusing existing orbit*-sm if available or defining specific mobile behavior here. */
+    /* Enlarge photo further for mobile as requested */
+    .profile-img {
+        transform: scale(1.35) translateY(5px);
+    }
 
+    /* Fix Scroll Down overlap: Make it flow naturally below content */
+    .scroll-indicator {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin-top: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .scroll-indicator span {
+        display: block;
+        margin-top: 8px;
+    }
+
+    /* Smaller orbit radius for phones so badges don't fly off screen */
     .badge-ml {
         animation-name: orbit1-sm;
     }
