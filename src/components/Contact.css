@@ -193,11 +193,46 @@
 }
 
 @media (max-width: 600px) {
+    .contact {
+        padding: 60px 0;
+    }
+
     .contact-form {
-        padding: 24px;
+        padding: 20px 16px;
+        margin: 0 8px;
+        border-radius: var(--radius-lg);
     }
 
     .contact-card {
-        padding: 16px;
+        padding: 14px 16px;
+        gap: 14px;
+    }
+
+    .contact-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .contact-cards {
+        max-width: 100%;
+    }
+
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 14px 16px;
+        font-size: 0.95rem;
+    }
+
+    .form-group label {
+        font-size: 0.85rem;
+        margin-bottom: 8px;
+    }
+
+    .btn-full {
+        padding: 14px 20px;
     }
 }
