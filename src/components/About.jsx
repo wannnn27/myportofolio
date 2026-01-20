@@ -37,10 +37,10 @@ const About = () => {
 
                         <div className="about-text">
                             <p>
-                                Saya adalah mahasiswa Sistem Informasi yang memiliki ketertarikan besar pada bidang Machine Learning dan Artificial Intelligence. Saya akan terus belajar dan berusaha mengembangkan diri dengan memahami bagaimana data dan teknologi AI dapat digunakan untuk memecahkan berbagai permasalahan.
+                                Mahasiswa Sistem Informasi yang memiliki ketertarikan besar pada bidang Machine Learning dan Artificial Intelligence. Saya akan terus belajar dan berusaha mengembangkan diri dengan memahami bagaimana data dan teknologi AI dapat digunakan untuk memecahkan berbagai permasalahan.
                             </p>
                             <p>
-                                Ketertarikan saya bermula dari rasa ingin tahu terhadap cara data diolah menjadi informasi yang bermakna. Seiring berjalannya waktu, saya semakin terdorong untuk memperdalam kemampuan di bidang AI. Saat ini, saya fokus mengembangkan skill dalam Machine Learning, serta mulai mempelajari area seperti Deep Learning, Natural Language Processing, dan Computer Vision sebagai bagian dari proses bertumbuh dan eksplorasi saya di dunia AI.
+                                Ketertarikan terhadap bidang AI bermula dari rasa ingin tahu terhadap cara data diolah menjadi informasi yang bermakna. Seiring berjalannya waktu, saya semakin terdorong untuk memperdalam kemampuan di bidang AI. Saat ini, saya fokus mengembangkan skill dalam Machine Learning, serta mulai mempelajari area seperti Deep Learning, Natural Language Processing, dan Computer Vision sebagai bagian dari proses bertumbuh dan eksplorasi saya di dunia AI.
                             </p>
                         </div>
 
