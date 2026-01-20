@@ -33,6 +33,6 @@
 
 @media (max-width: 600px) {
     .back-to-top {
-        display: none;
+        display: none !important;
     }
 }
