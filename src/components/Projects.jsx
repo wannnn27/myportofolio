@@ -3,6 +3,7 @@ import './Projects.css';
 import edaDatmin from '../assets/images/image-project/EDA_datmin.png';
 import sastrafyImg from '../assets/images/image-project/Sastrafy.png';
 import factifyImg from '../assets/images/image-project/Factify.png';
+import foodRecImg from '../assets/images/image-project/food-recomendation.png';
 
 const Projects = () => {
     const [filter, setFilter] = useState('all');
@@ -38,6 +39,16 @@ const Projects = () => {
             demo: 'https://factify-2b144.web.app',
             github: 'https://github.com/wannnn27/Factify'
         },
+        {
+            id: 14,
+            title: 'Food Recommendation System',
+            category: 'ml',
+            description: 'Sistem rekomendasi makanan berbasis AI yang membantu pengguna memilih makanan berdasarkan berat badan dan tujuan.',
+            tech: ['Python', 'Scikit-Learn', 'Pandas', 'Gradio'],
+            image: foodRecImg,
+            demo: 'https://huggingface.co/spaces/arwnsyh/food-recommendation-system',
+            github: 'https://github.com/wannnn27/food-recomendation'
+        },
     ];
 
     const filters = [
@@ -45,6 +56,7 @@ const Projects = () => {
         { value: 'apps', label: 'App Dev' },
         { value: 'web', label: 'Web Dev' },
         { value: 'mining', label: 'Data Mining' },
+        { value: 'ml', label: 'Machine Learning' },
     ];
 
     const filteredProjects = filter === 'all'
