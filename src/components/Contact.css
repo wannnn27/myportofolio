@@ -158,6 +158,10 @@
 .form-group input,
 .form-group textarea {
     width: 100%;
+    max-width: 100%;
+    /* Ensure it doesn't overflow */
+    box-sizing: border-box;
+    /* Include padding in width calculation */
     padding: 16px 20px;
     font-size: 1rem;
     font-family: inherit;
