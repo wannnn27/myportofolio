@@ -54,8 +54,8 @@ const Hero = () => {
                     </p>
 
                     <p className="hero-description">
-                        Mengubah data menjadi insight dan membangun solusi cerdas yang berdampak.
-                        Mari berkolaborasi untuk menciptakan sesuatu yang luar biasa.
+                        Mengubah data menjadi insight bermakna dan membangun solusi cerdas yang memberikan dampak nyata.
+                        Mari berkolaborasi untuk menciptakan inovasi yang bernilai.
                     </p>
 
                     <div className="hero-buttons">
