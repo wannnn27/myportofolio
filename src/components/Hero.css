@@ -544,9 +544,9 @@
         height: 220px;
     }
 
-    /* Enlarge photo further per request (Focus on face) */
+    /* Enlarge photo and lift it up to center the face/body in the circle */
     .profile-img {
-        transform: scale(1.45) translateY(10px);
+        transform: scale(1.45) translateY(-30px);
     }
 
     /* Remove Scroll Indicator on mobile as requested */
