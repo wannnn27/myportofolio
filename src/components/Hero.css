@@ -520,8 +520,7 @@
     .hero {
         padding-top: 90px;
         overflow-x: hidden;
-        padding-bottom: 40px;
-        /* Space for scroll indicator flow */
+        padding-bottom: 20px;
     }
 
     .hero-title {
@@ -545,26 +544,14 @@
         height: 220px;
     }
 
-    /* Enlarge photo further for mobile as requested */
+    /* Enlarge photo further per request (Focus on face) */
     .profile-img {
-        transform: scale(1.35) translateY(5px);
+        transform: scale(1.45) translateY(10px);
     }
 
-    /* Fix Scroll Down overlap: Make it flow naturally below content */
+    /* Remove Scroll Indicator on mobile as requested */
     .scroll-indicator {
-        position: relative;
-        bottom: auto;
-        left: auto;
-        transform: none;
-        margin-top: 40px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .scroll-indicator span {
-        display: block;
-        margin-top: 8px;
+        display: none;
     }
 
     /* Smaller orbit radius for phones so badges don't fly off screen */
