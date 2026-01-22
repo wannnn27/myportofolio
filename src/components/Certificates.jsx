@@ -10,6 +10,9 @@ import sertif3 from '../assets/images/sertifikat/sertif 3.png';
 import sertif4 from '../assets/images/sertifikat/sertif 4.png';
 import sertif6 from '../assets/images/sertifikat/sertif 6.png';
 import sertifBootcamp from '../assets/images/sertifikat/sertif-bootcamp.png';
+import sertifMachineLearning from '../assets/images/sertifikat/Machine-learning-dicoding.png';
+import sertifDasarAI from '../assets/images/sertifikat/dasar-ai.png';
+import sertifWeb from '../assets/images/sertifikat/web.png';
 
 const Certificates = () => {
     const scrollRef = useRef(null);
@@ -32,11 +35,27 @@ const Certificates = () => {
             link: '#'
         },
         {
+            id: 9,
+            title: 'Machine Learning',
+            issuer: 'Dicoding',
+            year: '2025',
+            image: sertifMachineLearning,
+            link: '#'
+        },
+        {
             id: 8,
             title: 'Dasar AI',
             issuer: 'Dicoding',
             year: '2024',
-            image: sertif6,
+            image: sertifDasarAI,
+            link: '#'
+        },
+        {
+            id: 10,
+            title: 'Pemrograman Web',
+            issuer: 'Dicoding',
+            year: '2025',
+            image: sertifWeb,
             link: '#'
         },
         {
