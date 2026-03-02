@@ -49,6 +49,16 @@ const Projects = () => {
             demo: 'https://huggingface.co/spaces/arwnsyh/food-recommendation-system',
             github: 'https://github.com/wannnn27/food-recomendation'
         },
+        {
+            id: 15,
+            title: 'Telco Customer Churn Prediction',
+            category: 'ml',
+            description: 'Proyek machine learning end-to-end yang memprediksi pelanggan mana yang berisiko berhenti berlangganan, sekaligus menghasilkan rekomendasi bisnis berbasis data.',
+            tech: ['Python', 'Scikit-Learn', 'XGBoost', 'Pandas'],
+            demo: 'https://github.com/wannnn27/Telco_Churn_Analisis',
+            github: 'https://github.com/wannnn27/Telco_Churn_Analisis',
+            icon: '📊'
+        },
     ];
 
     const filters = [
