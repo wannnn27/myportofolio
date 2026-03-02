@@ -4,6 +4,7 @@ import edaDatmin from '../assets/images/image-project/EDA_datmin.png';
 import sastrafyImg from '../assets/images/image-project/Sastrafy.png';
 import factifyImg from '../assets/images/image-project/Factify.png';
 import foodRecImg from '../assets/images/image-project/food-recomendation.png';
+import telcoChurnImg from '../assets/images/image-project/telco_churn.png';
 
 const Projects = () => {
     const [filter, setFilter] = useState('all');
@@ -57,7 +58,7 @@ const Projects = () => {
             tech: ['Python', 'Scikit-Learn', 'XGBoost', 'Pandas'],
             demo: 'https://github.com/wannnn27/Telco_Churn_Analisis',
             github: 'https://github.com/wannnn27/Telco_Churn_Analisis',
-            icon: '📊'
+            image: telcoChurnImg
         },
     ];
 
