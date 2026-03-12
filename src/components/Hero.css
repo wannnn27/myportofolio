@@ -201,10 +201,10 @@
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
-    object-position: center top;
-    transform-origin: center top;
-    transform: scale(1.45);
-    /* Full kepala, batas tangan */
+    object-position: center bottom;
+    transform-origin: center bottom;
+    transform: scale(1.1);
+    /* Fokus ke bagian bawah gambar untuk menampilkan kepala dan badan */
 }
 
 /* Floating Badges */
@@ -461,7 +461,7 @@
     }
 
     .profile-img {
-        transform: scale(1.45);
+        transform: scale(1.1);
     }
 
     /* Restore orbit behavior users wanted */
@@ -534,7 +534,7 @@
     }
 
     .profile-img {
-        transform: scale(1.5);
+        transform: scale(1.1);
     }
 
     /* Remove Scroll Indicator on mobile as requested */
