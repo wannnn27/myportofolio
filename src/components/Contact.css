@@ -35,7 +35,7 @@
     gap: 20px;
     padding: 24px;
     background: var(--dark-700);
-    border: 1px solid rgba(45, 212, 191, 0.1);
+    border: 1px solid var(--dark-600);
     border-radius: var(--radius-lg);
     transition: var(--transition-normal);
     cursor: pointer;
@@ -45,7 +45,8 @@
 
 .contact-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--shadow-md);
+    border-color: var(--white);
 }
 
 .contact-icon {
@@ -115,7 +116,7 @@
     opacity: 0;
     transform: translateX(-10px);
     transition: var(--transition-normal);
-    color: var(--mint-400);
+    color: var(--white);
 }
 
 .contact-card:hover .contact-arrow {
@@ -125,7 +126,7 @@
 
 .contact-form {
     background: var(--dark-700);
-    border: 1px solid rgba(45, 212, 191, 0.1);
+    border: 1px solid var(--dark-600);
     border-radius: var(--radius-xl);
     padding: 40px;
 }
@@ -135,10 +136,10 @@
     align-items: center;
     gap: 10px;
     padding: 16px;
-    background: rgba(45, 212, 191, 0.1);
-    border: 1px solid var(--mint-400);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--white);
     border-radius: var(--radius-md);
-    color: var(--mint-400);
+    color: var(--white);
     font-weight: 600;
     margin-bottom: 24px;
 }
@@ -159,15 +160,13 @@
 .form-group textarea {
     width: 100%;
     max-width: 100%;
-    /* Ensure it doesn't overflow */
     box-sizing: border-box;
-    /* Include padding in width calculation */
     padding: 16px 20px;
     font-size: 1rem;
     font-family: inherit;
     color: var(--white);
     background: var(--dark-800);
-    border: 1px solid rgba(45, 212, 191, 0.2);
+    border: 1px solid var(--dark-600);
     border-radius: var(--radius-md);
     transition: var(--transition-fast);
     resize: vertical;
@@ -181,8 +180,8 @@
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--mint-400);
-    box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.1);
+    border-color: var(--white);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
 }
 
 @media (max-width: 968px) {

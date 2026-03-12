@@ -50,7 +50,7 @@
     position: relative;
     width: 320px;
     background: var(--dark-800);
-    border: 1px solid rgba(45, 212, 191, 0.1);
+    border: 1px solid var(--dark-600);
     border-radius: var(--radius-lg);
     overflow: hidden;
     transition: var(--transition-normal);
@@ -59,9 +59,9 @@
 }
 
 .certificate-card:hover {
-    border-color: var(--mint-400);
+    border-color: var(--white);
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 40px rgba(45, 212, 191, 0.15);
+    box-shadow: var(--shadow-lg);
     z-index: 2;
 }
 
@@ -102,7 +102,7 @@
 
 .view-btn {
     padding: 10px 24px;
-    background: var(--mint-400);
+    background: var(--white);
     color: var(--dark-900);
     font-weight: 600;
     font-size: 0.9rem;
@@ -138,11 +138,13 @@
 }
 
 .cert-dot {
-    color: var(--mint-400);
+    color: var(--white);
+    opacity: 0.5;
 }
 
 .cert-year {
-    color: var(--mint-400);
+    color: var(--white);
+    opacity: 0.8;
     font-weight: 600;
 }
 

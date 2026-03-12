@@ -16,7 +16,7 @@
     font-weight: 600;
     color: var(--gray-300);
     background: transparent;
-    border: 1px solid rgba(45, 212, 191, 0.2);
+    border: 1px solid var(--dark-600);
     border-radius: var(--radius-full);
     cursor: pointer;
     transition: var(--transition-normal);
@@ -24,14 +24,14 @@
 }
 
 .filter-btn:hover {
-    color: var(--mint-400);
-    border-color: var(--mint-400);
+    color: var(--white);
+    border-color: var(--white);
 }
 
 .filter-btn.active {
     color: var(--dark-900);
-    background: var(--gradient-mint);
-    border-color: transparent;
+    background: var(--white);
+    border-color: var(--white);
 }
 
 .projects-grid {
@@ -42,7 +42,7 @@
 
 .project-card {
     background: var(--dark-700);
-    border: 1px solid rgba(45, 212, 191, 0.1);
+    border: 1px solid var(--dark-600);
     border-radius: var(--radius-xl);
     overflow: hidden;
     transition: var(--transition-normal);
@@ -50,8 +50,8 @@
 
 .project-card:hover {
     transform: translateY(-8px);
-    border-color: var(--mint-400);
-    box-shadow: 0 20px 50px rgba(45, 212, 191, 0.15);
+    border-color: var(--white);
+    box-shadow: var(--shadow-lg);
 }
 
 .project-image {
@@ -95,7 +95,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--mint-400);
+    background: var(--white);
     color: var(--dark-900);
     border-radius: 50%;
     transition: var(--transition-fast);
@@ -103,7 +103,7 @@
 
 .project-link:hover {
     transform: scale(1.1);
-    box-shadow: var(--shadow-mint);
+    box-shadow: var(--shadow-md);
 }
 
 .project-content {
@@ -114,7 +114,8 @@
     display: inline-block;
     font-size: 0.8rem;
     font-weight: 600;
-    color: var(--mint-400);
+    color: var(--white);
+    opacity: 0.8;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 12px;
@@ -144,8 +145,9 @@
     padding: 6px 14px;
     font-size: 0.8rem;
     font-weight: 500;
-    color: var(--mint-400);
-    background: rgba(45, 212, 191, 0.1);
+    color: var(--gray-200);
+    background: var(--dark-600);
+    border: 1px solid var(--dark-500);
     border-radius: var(--radius-full);
 }
 

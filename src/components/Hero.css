@@ -21,7 +21,7 @@
     right: -10%;
     width: 60%;
     height: 80%;
-    background: radial-gradient(ellipse at center, rgba(45, 212, 191, 0.12) 0%, transparent 60%);
+    background: var(--gradient-glow);
     filter: blur(60px);
 }
 
@@ -29,8 +29,8 @@
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(rgba(45, 212, 191, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(45, 212, 191, 0.03) 1px, transparent 1px);
+        linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
     background-size: 60px 60px;
     mask-image: radial-gradient(ellipse at center, black 20%, transparent 70%);
 }
@@ -55,31 +55,27 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    padding: 4px 12px;
-    background: linear-gradient(135deg, rgba(45, 212, 191, 0.15) 0%, rgba(45, 212, 191, 0.05) 100%);
-    border: 1px solid rgba(45, 212, 191, 0.3);
+    padding: 6px 14px;
+    background: var(--dark-800);
+    border: 1px solid var(--dark-600);
     border-radius: var(--radius-full);
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     font-weight: 600;
-    color: var(--mint-400);
+    color: var(--white);
     margin-bottom: 24px;
     margin-top: 30px;
-    /* Tambahan jarak dari navbar */
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    box-shadow: 0 0 20px rgba(45, 212, 191, 0.15);
-    animation: badgePulse 3s ease-in-out infinite;
+    box-shadow: 0 0 10px rgba(0, 171, 228, 0.1);
 }
 
 @keyframes badgePulse {
-
     0%,
     100% {
-        box-shadow: 0 0 20px rgba(45, 212, 191, 0.15);
+        box-shadow: 0 0 10px rgba(0, 171, 228, 0.1);
     }
-
     50% {
-        box-shadow: 0 0 30px rgba(45, 212, 191, 0.25);
+        box-shadow: 0 0 20px rgba(0, 171, 228, 0.2);
     }
 }
 
@@ -112,7 +108,7 @@
 
 .typing-text {
     color: var(--mint-400);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .cursor {
@@ -146,18 +142,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(45, 212, 191, 0.05);
-    /* Sedikit lebih transparan */
-    border: 1px solid rgba(45, 212, 191, 0.2);
+    background: var(--dark-800);
+    border: 1px solid var(--dark-600);
     border-radius: 50%;
-    /* Jadi lingkaran */
-    color: var(--mint-400);
+    color: var(--white);
     transition: var(--transition-normal);
 }
 
 .social-link:hover {
     background: var(--mint-400);
-    color: var(--dark-900);
+    color: var(--white);
     transform: translateY(-4px);
     box-shadow: var(--shadow-mint);
 }
@@ -179,7 +173,7 @@
 .image-glow {
     position: absolute;
     inset: -20px;
-    background: radial-gradient(circle at center, rgba(45, 212, 191, 0.3) 0%, transparent 60%);
+    background: radial-gradient(circle at center, rgba(0, 171, 228, 0.15) 0%, transparent 60%);
     filter: blur(40px);
     animation: pulse 4s ease-in-out infinite;
 }
@@ -189,17 +183,17 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: linear-gradient(135deg, rgba(45, 212, 191, 0.2), rgba(45, 212, 191, 0.1));
-    border: 2px solid var(--mint-400);
+    background: var(--dark-800);
+    border: 2px solid var(--dark-600);
     z-index: 1;
     overflow: hidden;
-    box-shadow: 0 0 30px rgba(45, 212, 191, 0.2);
+    box-shadow: 0 0 20px rgba(0, 171, 228, 0.15);
     transition: transform 0.3s ease;
 }
 
 .profile-photo:hover {
     transform: scale(1.02);
-    border-color: var(--white);
+    border-color: var(--mint-400);
 }
 
 .profile-img {
@@ -208,8 +202,9 @@
     border-radius: 50%;
     object-fit: cover;
     object-position: center top;
-    transform: scale(1.6) translateY(-15%);
-    /* Zoom dan tarik ke atas */
+    transform-origin: center top;
+    transform: scale(1.45);
+    /* Full kepala, batas tangan */
 }
 
 /* Floating Badges */
@@ -219,25 +214,21 @@
     align-items: center;
     gap: 8px;
     padding: 10px 18px;
-    background: rgba(26, 36, 32, 0.9);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(45, 212, 191, 0.2);
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: var(--radius-lg);
     font-size: 0.85rem;
     font-weight: 600;
     color: var(--white);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-md);
     z-index: 2;
-    /* Posisikan di tengah dulu sebagai pusat rotasi */
     top: 50%;
     left: 50%;
     transform-origin: center center;
-    /* Hapus width/height tetap agar fleksibel */
     white-space: nowrap;
     margin-top: -20px;
-    /* Offset setengah tinggi kira-kira */
     margin-left: -50px;
-    /* Offset setengah lebar kira-kira, tapi flexible */
 }
 
 /* Animations Orbit */
@@ -429,7 +420,6 @@
         opacity: 1;
         transform: translateX(-50%) translateY(0);
     }
-
     100% {
         opacity: 0;
         transform: translateX(-50%) translateY(12px);
@@ -470,10 +460,8 @@
         height: 100%;
     }
 
-    /* Adjust profile image for mobile to prevent severe cropping */
     .profile-img {
-        transform: scale(1.1) translateY(0);
-        /* Reset scale/translate for clear view */
+        transform: scale(1.45);
     }
 
     /* Restore orbit behavior users wanted */
@@ -486,8 +474,9 @@
         font-size: 0.75rem;
         padding: 8px 16px;
         white-space: nowrap;
-        background: rgba(26, 36, 32, 0.95);
-        /* More opaque for readability */
+        background: rgba(255, 255, 255, 0.95);
+        color: var(--white);
+        border: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     /* Enable animations again */
@@ -544,9 +533,8 @@
         height: 220px;
     }
 
-    /* Enlarge photo and lift it up to center the face/body in the circle */
     .profile-img {
-        transform: scale(1.45) translateY(-30px);
+        transform: scale(1.5);
     }
 
     /* Remove Scroll Indicator on mobile as requested */

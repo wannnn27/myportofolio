@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './Hero.css';
-import profilePhoto from '../assets/images/aku.png';
+import profilePhoto from '../assets/images/gue.png';
 
 const Hero = () => {
     const [typedText, setTypedText] = useState('');
@@ -120,7 +120,6 @@ const Hero = () => {
                     <div className="mouse">
                         <div className="wheel"></div>
                     </div>
-                    <span>Scroll Down</span>
                 </a>
             </div>
         </section>

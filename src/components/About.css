@@ -17,15 +17,17 @@
     position: relative;
     aspect-ratio: 1;
     border-radius: var(--radius-xl);
-    background: linear-gradient(135deg, var(--mint-400), var(--mint-600));
-    padding: 4px;
+    background: var(--dark-700);
+    border: 1px solid var(--dark-500);
+    padding: 0;
     overflow: hidden;
     transition: all 0.3s ease;
 }
 
 .about-img-wrapper:hover {
-    box-shadow: 0 0 30px rgba(45, 212, 191, 0.5);
+    box-shadow: var(--shadow-lg);
     transform: translateY(-5px);
+    border-color: var(--white);
 }
 
 .about-img {
@@ -48,11 +50,12 @@
     position: absolute;
     bottom: -20px;
     right: -20px;
-    background: var(--gradient-mint);
+    background: var(--white);
     padding: 16px 24px;
     border-radius: var(--radius-lg);
     text-align: center;
-    box-shadow: var(--shadow-mint);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-200);
 }
 
 .exp-text {
@@ -72,7 +75,7 @@
 
 .about-card {
     background: var(--dark-700);
-    border: 1px solid rgba(45, 212, 191, 0.1);
+    border: 1px solid var(--dark-600);
     border-radius: var(--radius-lg);
     padding: 24px;
     text-align: center;
@@ -80,15 +83,16 @@
 }
 
 .about-card:hover {
-    border-color: var(--mint-400);
+    border-color: var(--white);
     transform: translateY(-5px);
-    box-shadow: var(--shadow-mint);
+    box-shadow: var(--shadow-md);
 }
 
 .card-icon {
     font-size: 2rem;
     display: block;
     margin-bottom: 16px;
+    color: var(--white);
 }
 
 .about-card h3 {
@@ -100,7 +104,8 @@
 
 .about-card p {
     font-size: 0.9rem;
-    color: var(--mint-400);
+    color: var(--white);
+    opacity: 0.7;
 }
 
 .about-text {
