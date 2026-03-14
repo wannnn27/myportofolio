@@ -35,10 +35,9 @@ const Hero = () => {
     }, [charIndex, isDeleting, phraseIndex, phrases]);
 
     return (
-        <section className="hero" id="home">
+        <section className="hero section section-grid" id="home">
             <div className="hero-bg">
                 <div className="hero-glow"></div>
-                <div className="hero-grid"></div>
             </div>
 
             <div className="hero-container">

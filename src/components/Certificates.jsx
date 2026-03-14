@@ -104,7 +104,7 @@ const Certificates = () => {
     const allCertificates = [...certificates, ...certificates];
 
     return (
-        <section className="certificates section" id="certificates">
+        <section className="certificates section section-grid" id="certificates">
             <div className="container-fluid">
                 <div className="section-header">
                     <span className="section-label">Achievements</span>

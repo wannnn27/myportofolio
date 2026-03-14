@@ -1,5 +1,5 @@
 .skills {
-    background: var(--dark-900);
+    background: var(--bg-primary);
 }
 
 .skills-grid-simple {
@@ -16,17 +16,17 @@
     align-items: center;
     gap: 16px;
     padding: 32px 24px;
-    background: var(--dark-800);
-    border: 1px solid var(--dark-700);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-light);
     border-radius: var(--radius-xl);
     transition: var(--transition-normal);
     cursor: default;
 }
 
 .skill-card:hover {
-    border-color: var(--white);
+    border-color: var(--border-heavy);
     transform: translateY(-6px);
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-lg);
 }
 
 .skill-logo {
@@ -43,7 +43,7 @@
 .skill-name {
     font-size: 1rem;
     font-weight: 600;
-    color: var(--gray-200);
+    color: var(--text-primary);
     text-align: center;
 }
 

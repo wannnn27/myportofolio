@@ -1,5 +1,5 @@
 .certificates {
-    background: var(--dark-900);
+    background: var(--bg-primary);
     overflow: hidden;
     /* Prevent horizontal scrollbar on body */
 }
@@ -49,8 +49,8 @@
 .certificate-card {
     position: relative;
     width: 320px;
-    background: var(--dark-800);
-    border: 1px solid var(--dark-600);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-light);
     border-radius: var(--radius-lg);
     overflow: hidden;
     transition: var(--transition-normal);
@@ -59,7 +59,7 @@
 }
 
 .certificate-card:hover {
-    border-color: var(--white);
+    border-color: var(--border-heavy);
     transform: translateY(-8px) scale(1.02);
     box-shadow: var(--shadow-lg);
     z-index: 2;
@@ -69,7 +69,7 @@
     position: relative;
     width: 100%;
     height: 200px;
-    background: var(--dark-700);
+    background: var(--bg-tertiary);
     overflow: hidden;
 }
 
