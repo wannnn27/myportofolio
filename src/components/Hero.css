@@ -377,54 +377,6 @@
 }
 
 
-/* Scroll Indicator */
-.scroll-indicator {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-}
-
-.scroll-indicator a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    color: var(--gray-400);
-    font-size: 0.85rem;
-}
-
-.mouse {
-    width: 26px;
-    height: 40px;
-    border: 2px solid var(--mint-400);
-    border-radius: 20px;
-    position: relative;
-}
-
-.wheel {
-    width: 4px;
-    height: 8px;
-    background: var(--mint-400);
-    border-radius: 4px;
-    position: absolute;
-    top: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: scroll 2s infinite;
-}
-
-@keyframes scroll {
-    0% {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(-50%) translateY(12px);
-    }
-}
 
 @media (max-width: 968px) {
     .hero {
@@ -535,11 +487,6 @@
 
     .profile-img {
         transform: scale(1.1);
-    }
-
-    /* Remove Scroll Indicator on mobile as requested */
-    .scroll-indicator {
-        display: none;
     }
 
     /* Smaller orbit radius for phones so badges don't fly off screen */

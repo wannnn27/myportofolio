@@ -84,7 +84,7 @@ const Projects = () => {
             <div className="container">
                 <div className="section-header">
                     <span className="section-label">My Work</span>
-                    <h2 className="section-title">Featured Projects</h2>
+                    <h2 className="section-title">Projects</h2>
                 </div>
 
                 <div className="projects-filter">
