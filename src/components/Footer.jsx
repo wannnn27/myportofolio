@@ -48,6 +48,7 @@ const Footer = () => {
 
                 <div className="footer-bottom">
                     <p>&copy; {currentYear} Adi Arwan Syah. All rights reserved.</p>
+                    <p className="footer-quote">"be 1% better than yesterday, and trust the process"</p>
                 </div>
             </div>
         </footer>
