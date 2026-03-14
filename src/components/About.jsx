@@ -53,6 +53,20 @@ const About = () => {
                             <img src={aboutImage} alt="Adi Arwan Syah" className="profile-img-circle" />
                             <div className="circle-glow-bg"></div>
                         </div>
+
+                        {/* Floating badge bottom-right */}
+                        <div className="about-float-badge about-float-badge--br">
+                            <div className="about-float-badge__icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                                </svg>
+                            </div>
+                            <div className="about-float-badge__text">
+                                <strong>Always Learning</strong>
+                                <span>Learner</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -107,7 +121,7 @@ const About = () => {
                         </div>
                         <div className="stat-box-bottom">
                             <h4>Semester Studi</h4>
-                            <p>Continuous learning journey</p>
+                            <p>Universitas Ahmad Dahlan — Information System</p>
                             <span className="stat-arrow">↗</span>
                         </div>
                     </div>

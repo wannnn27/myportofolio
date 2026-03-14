@@ -110,6 +110,29 @@ const projects = [
     },
 ];
 
+const certificates = [
+    { id: 1,  title: 'Juara 3 National Essay Competition', issuer: 'National Essay Competition', year: '2025', image: sertifJuara },
+    { id: 2,  title: 'Python Programming',                 issuer: 'Dicoding',                   year: '2025', image: sertifPythonDicoding },
+    { id: 3,  title: 'Machine Learning',                   issuer: 'Dicoding',                   year: '2025', image: sertifMachineLearning },
+    { id: 4,  title: 'Dasar AI',                           issuer: 'Dicoding',                   year: '2024', image: sertifDasarAI },
+    { id: 5,  title: 'Pemrograman Web',                    issuer: 'Dicoding',                   year: '2025', image: sertifWeb },
+    { id: 6,  title: 'GitHub Copilot',                     issuer: 'Microsoft',                  year: '2024', image: sertif1 },
+    { id: 7,  title: 'Cloud Concepts',                     issuer: 'Microsoft',                  year: '2024', image: sertif2 },
+    { id: 8,  title: 'Computer Vision',                    issuer: 'Microsoft',                  year: '2024', image: sertif3 },
+    { id: 9,  title: 'Document Intelligence',              issuer: 'Microsoft',                  year: '2024', image: sertif4 },
+    { id: 10, title: 'Bootcamp Machine Learning',          issuer: 'Lumoshive Academy',           year: '2025', image: sertifBootcamp },
+];
+
+const techStack = [
+    { name: 'Python',       icon: pythonLogo,      category: 'Language',   desc: 'Bahasa utama untuk data science, ML pipeline, scripting, dan otomasi.' },
+    { name: 'TensorFlow',   icon: tensorflowLogo,  category: 'Deep Learning', desc: 'Framework deep learning untuk membangun dan melatih neural network.' },
+    { name: 'PyTorch',      icon: pytorchLogo,     category: 'Deep Learning', desc: 'Library ML berbasis dynamic computation graph untuk riset dan eksperimen.' },
+    { name: 'Scikit-learn', icon: scikitLearnLogo, category: 'ML Library', desc: 'Toolkit machine learning klasik: klasifikasi, regresi, clustering, dan evaluasi.' },
+    { name: 'Jupyter',      icon: jupyterLogo,     category: 'Environment', desc: 'Notebook interaktif untuk eksplorasi data, visualisasi, dan dokumentasi analisis.' },
+    { name: 'Streamlit',    icon: streamlitLogo,   category: 'Deployment', desc: 'Framework untuk mengubah script Python menjadi web app data science secara cepat.' },
+    { name: 'Docker',       icon: dockerLogo,      category: 'DevOps',     desc: 'Containerisasi aplikasi agar konsisten di berbagai environment deployment.' },
+];
+
 const catStyle = {
     mining: { color: '#38bdf8', bg: 'rgba(56,189,248,0.1)', border: 'rgba(56,189,248,0.25)' },
     web:    { color: '#38bdf8', bg: 'rgba(56,189,248,0.1)', border: 'rgba(56,189,248,0.25)' },
@@ -117,105 +140,13 @@ const catStyle = {
     ml:     { color: '#38bdf8', bg: 'rgba(56,189,248,0.1)', border: 'rgba(56,189,248,0.25)' },
 };
 
-const certificates = [
-    {
-        id: 1,
-        title: 'Juara 3 National Essay Competition',
-        issuer: 'National Essay Competition',
-        year: '2025',
-        image: sertifJuara,
-        link: '#'
-    },
-    {
-        id: 2,
-        title: 'Python Programming',
-        issuer: 'Dicoding',
-        year: '2025',
-        image: sertifPythonDicoding,
-        link: '#'
-    },
-    {
-        id: 3,
-        title: 'Machine Learning',
-        issuer: 'Dicoding',
-        year: '2025',
-        image: sertifMachineLearning,
-        link: '#'
-    },
-    {
-        id: 4,
-        title: 'Dasar AI',
-        issuer: 'Dicoding',
-        year: '2024',
-        image: sertifDasarAI,
-        link: '#'
-    },
-    {
-        id: 5,
-        title: 'Pemrograman Web',
-        issuer: 'Dicoding',
-        year: '2025',
-        image: sertifWeb,
-        link: '#'
-    },
-    {
-        id: 6,
-        title: 'GitHub Copilot',
-        issuer: 'Microsoft',
-        year: '2024',
-        image: sertif1,
-        link: '#'
-    },
-    {
-        id: 7,
-        title: 'Cloud Concepts',
-        issuer: 'Microsoft',
-        year: '2024',
-        image: sertif2,
-        link: '#'
-    },
-    {
-        id: 8,
-        title: 'Computer Vision',
-        issuer: 'Microsoft',
-        year: '2024',
-        image: sertif3,
-        link: '#'
-    },
-    {
-        id: 9,
-        title: 'Document Intelligence',
-        issuer: 'Microsoft',
-        year: '2024',
-        image: sertif4,
-        link: '#'
-    },
-    {
-        id: 10,
-        title: 'Bootcamp Machine Learning',
-        issuer: 'Lumoshive Academy',
-        year: '2025',
-        image: sertifBootcamp,
-        link: '#'
-    },
-];
-
-const techStack = [
-    { name: 'Python', icon: pythonLogo },
-    { name: 'TensorFlow', icon: tensorflowLogo },
-    { name: 'PyTorch', icon: pytorchLogo },
-    { name: 'Scikit-learn', icon: scikitLearnLogo },
-    { name: 'Jupyter', icon: jupyterLogo },
-    { name: 'Streamlit', icon: streamlitLogo },
-    { name: 'Docker', icon: dockerLogo },
-];
+const BLUE = { color: '#38bdf8', bg: 'rgba(56,189,248,0.1)', border: 'rgba(56,189,248,0.25)' };
 
 /* ── SVG Icons ───────────────────────────────── */
 const ICode   = () => <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>;
 const ICert   = () => <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>;
 const IStack  = () => <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>;
 const IArrowR = () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>;
-const IArrowL = () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>;
 const ILink   = () => <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>;
 const IGH     = () => <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>;
 const IStar   = () => <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>;
@@ -228,7 +159,9 @@ const Projects = ({ onSelectProject }) => {
     const [activeTab, setActiveTab] = useState('projects');
 
     return (
-        <section className="ps section section-grid" id="projects">
+        <section className="ps" id="projects">
+            <div className="ps__bg-grid" />
+
             <div className="ps__wrap">
                 {/* Header */}
                 <div className="ps__header">
@@ -255,7 +188,7 @@ const Projects = ({ onSelectProject }) => {
                     ))}
                 </div>
 
-                {/* Cards */}
+                {/* ── Projects ── */}
                 {activeTab === 'projects' && (
                     <div className="ps__grid">
                         {projects.map((p, idx) => {
@@ -266,21 +199,16 @@ const Projects = ({ onSelectProject }) => {
                                         {p.image
                                             ? <img src={p.image} alt={p.title} className="pc__img" />
                                             : <div className="pc__no-img" />}
-                                        <span className="pc__badge"
-                                              style={{ color: c.color, background: c.bg, border: `1px solid ${c.border}` }}>
-                                            {p.category}
-                                        </span>
                                         <div className="pc__img-fade" />
                                     </div>
-
                                     <div className="pc__body">
+                                        <span className="pc__badge" style={{ color: c.color, background: c.bg, border: `1px solid ${c.border}` }}>
+                                            {p.category}
+                                        </span>
                                         <h3 className="pc__title">{p.title}</h3>
                                         <p className="pc__desc">
-                                            {p.description.length > 105
-                                                ? p.description.slice(0, 105) + '…'
-                                                : p.description}
+                                            {p.description.length > 105 ? p.description.slice(0, 105) + '…' : p.description}
                                         </p>
-
                                         <div className="pc__chips">
                                             {p.tech.slice(0, 3).map((t, i) => (
                                                 <span key={i} className="pc__chip">{t}</span>
@@ -289,7 +217,6 @@ const Projects = ({ onSelectProject }) => {
                                                 <span className="pc__chip pc__chip--more">+{p.tech.length - 3}</span>
                                             )}
                                         </div>
-
                                         <div className="pc__foot">
                                             <a href={p.demo} target="_blank" rel="noopener noreferrer"
                                                className="pc__demo" style={{ color: c.color }}>
@@ -302,8 +229,6 @@ const Projects = ({ onSelectProject }) => {
                                             </button>
                                         </div>
                                     </div>
-
-                                    {/* Hover border glow */}
                                     <div className="pc__hglow" style={{ '--c': c.color }} />
                                 </article>
                             );
@@ -311,72 +236,48 @@ const Projects = ({ onSelectProject }) => {
                     </div>
                 )}
 
+                {/* ── Certificates ── */}
                 {activeTab === 'certificates' && (
                     <div className="ps__grid">
                         {certificates.map((cert, idx) => (
                             <article className="pc" key={cert.id} style={{ animationDelay: `${idx * 0.07}s` }}>
                                 <div className="pc__img-wrap">
-                                    <img src={cert.image} alt={cert.title} className="pc__img" />
-                                    <span className="pc__badge"
-                                          style={{ color: '#38bdf8', background: 'rgba(56,189,248,0.1)', border: '1px solid rgba(56,189,248,0.25)' }}>
-                                        {cert.year}
-                                    </span>
+                                    <img src={cert.image} alt={cert.title} className="pc__img" style={{ objectPosition: 'center center' }} />
                                     <div className="pc__img-fade" />
                                 </div>
-
                                 <div className="pc__body">
+                                    <div className="pc__cert-meta">
+                                        <span className="pc__badge" style={{ color: BLUE.color, background: BLUE.bg, border: `1px solid ${BLUE.border}` }}>
+                                            {cert.issuer}
+                                        </span>
+                                        <span className="pc__cert-year">{cert.year}</span>
+                                    </div>
                                     <h3 className="pc__title">{cert.title}</h3>
-                                    <p className="pc__desc">
-                                        Issued by {cert.issuer}
-                                    </p>
-
-                                    <div className="pc__chips">
-                                        <span className="pc__chip">{cert.issuer}</span>
-                                    </div>
-
-                                    <div className="pc__foot">
-                                        <a href={cert.link} target="_blank" rel="noopener noreferrer"
-                                           className="pc__demo" style={{ color: '#38bdf8' }}>
-                                            View Certificate <ILink />
-                                        </a>
-                                    </div>
+                                    <p className="pc__desc">Issued by {cert.issuer} · {cert.year}</p>
                                 </div>
-
-                                {/* Hover border glow */}
-                                <div className="pc__hglow" style={{ '--c': '#38bdf8' }} />
+                                <div className="pc__hglow" style={{ '--c': BLUE.color }} />
                             </article>
                         ))}
                     </div>
                 )}
 
+                {/* ── Tech Stack ── */}
                 {activeTab === 'tech-stack' && (
-                    <div className="ps__grid">
+                    <div className="ps__grid ps__grid--tech">
                         {techStack.map((tech, idx) => (
-                            <article className="pc" key={idx} style={{ animationDelay: `${idx * 0.07}s` }}>
-                                <div className="pc__img-wrap">
-                                    <div className="pc__no-img" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#0d1526' }}>
-                                        <img src={tech.icon} alt={tech.name} style={{ width: '80px', height: '80px', objectFit: 'contain' }} />
-                                    </div>
-                                    <span className="pc__badge"
-                                          style={{ color: '#38bdf8', background: 'rgba(56,189,248,0.1)', border: '1px solid rgba(56,189,248,0.25)' }}>
-                                        Tech
-                                    </span>
-                                    <div className="pc__img-fade" />
+                            <article className="pc pc--tech" key={idx} style={{ animationDelay: `${idx * 0.07}s` }}>
+                                <div className="pc__tech-icon-wrap">
+                                    <img src={tech.icon} alt={tech.name} className="pc__tech-icon" />
+                                    <div className="pc__tech-glow" />
                                 </div>
-
                                 <div className="pc__body">
+                                    <span className="pc__badge" style={{ color: BLUE.color, background: BLUE.bg, border: `1px solid ${BLUE.border}` }}>
+                                        {tech.category}
+                                    </span>
                                     <h3 className="pc__title">{tech.name}</h3>
-                                    <p className="pc__desc">
-                                        Core technology in my machine learning stack
-                                    </p>
-
-                                    <div className="pc__chips">
-                                        <span className="pc__chip">ML Stack</span>
-                                    </div>
+                                    <p className="pc__desc">{tech.desc}</p>
                                 </div>
-
-                                {/* Hover border glow */}
-                                <div className="pc__hglow" style={{ '--c': '#38bdf8' }} />
+                                <div className="pc__hglow" style={{ '--c': BLUE.color }} />
                             </article>
                         ))}
                     </div>

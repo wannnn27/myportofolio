@@ -11,6 +11,16 @@
     min-height: 100vh;
 }
 
+.ps__bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(56,189,248,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56,189,248,0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+}
+
 .ps__wrap {
     max-width: 1200px;
     margin: 0 auto;
@@ -148,15 +158,18 @@
 /* Card image */
 .pc__img-wrap {
     position: relative;
-    height: 210px;
+    height: 200px;
     overflow: hidden;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 .pc__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center top;
     transition: transform 0.5s ease;
+    display: block;
 }
 
 .pc:hover .pc__img {
@@ -174,26 +187,26 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 80px;
+    height: 60px;
     background: linear-gradient(to top, #0d1526, transparent);
     pointer-events: none;
 }
 
 .pc__badge {
-    position: absolute;
-    top: 14px;
-    left: 14px;
-    padding: 4px 12px;
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 11px;
     border-radius: 20px;
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     font-weight: 700;
-    letter-spacing: 0.4px;
-    backdrop-filter: blur(8px);
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    width: fit-content;
 }
 
 /* Card body */
 .pc__body {
-    padding: 24px;
+    padding: 20px 24px 24px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -236,6 +249,90 @@
     background: transparent;
     color: #475569;
     border-color: rgba(255,255,255,0.05);
+}
+
+/* ── Certificate card extras ─────────────────── */
+.pc__cert-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
+.pc__cert-year {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #475569;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.07);
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* ── Tech card ───────────────────────────────── */
+.ps__grid--tech {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.pc--tech {
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    min-height: unset;
+}
+
+.pc__tech-icon-wrap {
+    position: relative;
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0a1220;
+    border-right: 1px solid rgba(255,255,255,0.06);
+}
+
+.pc__tech-icon {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.pc--tech:hover .pc__tech-icon {
+    transform: scale(1.12);
+}
+
+.pc__tech-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(56,189,248,0.08), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.pc--tech:hover .pc__tech-glow {
+    opacity: 1;
+}
+
+.pc--tech .pc__body {
+    padding: 18px 20px;
+}
+
+.pc--tech .pc__title {
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.pc--tech .pc__desc {
+    font-size: 0.8rem;
+    line-height: 1.55;
+    margin-bottom: 0;
+    color: #64748b;
 }
 
 .pc__foot {
