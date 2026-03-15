@@ -140,10 +140,27 @@
 }
 
 .social-link:hover {
-    background: var(--mint-400);
     color: var(--white);
     transform: translateY(-4px);
     box-shadow: var(--shadow-mint);
+}
+
+.social-link.github:hover {
+    background: #333;
+    border-color: #333;
+    box-shadow: 0 4px 15px rgba(51, 51, 51, 0.4);
+}
+
+.social-link.linkedin:hover {
+    background: #0077b5;
+    border-color: #0077b5;
+    box-shadow: 0 4px 15px rgba(0, 119, 181, 0.4);
+}
+
+.social-link.instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border-color: transparent;
+    box-shadow: 0 4px 15px rgba(220, 39, 67, 0.4);
 }
 
 /* Hero Image */
@@ -496,30 +513,30 @@
 /* Define explicit small screen orbits with safer radius */
 @keyframes orbit1-sm {
     from {
-        transform: rotate(0deg) translateX(140px) rotate(0deg);
+        transform: rotate(0deg) translateX(100px) rotate(0deg);
     }
 
     to {
-        transform: rotate(360deg) translateX(140px) rotate(-360deg);
+        transform: rotate(360deg) translateX(100px) rotate(-360deg);
     }
 }
 
 @keyframes orbit2-sm {
     from {
-        transform: rotate(120deg) translateX(140px) rotate(-120deg);
+        transform: rotate(120deg) translateX(100px) rotate(-120deg);
     }
 
     to {
-        transform: rotate(480deg) translateX(140px) rotate(-480deg);
+        transform: rotate(480deg) translateX(100px) rotate(-480deg);
     }
 }
 
 @keyframes orbit3-sm {
     from {
-        transform: rotate(240deg) translateX(140px) rotate(-240deg);
+        transform: rotate(240deg) translateX(100px) rotate(-240deg);
     }
 
     to {
-        transform: rotate(600deg) translateX(140px) rotate(-600deg);
+        transform: rotate(600deg) translateX(100px) rotate(-600deg);
     }
 }

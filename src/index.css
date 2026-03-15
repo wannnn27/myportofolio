@@ -57,7 +57,7 @@
 
 html,
 body {
-  max-width: 100vw;
+  max-width: 100%;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
@@ -142,6 +142,28 @@ img {
 }
 
 /* Section Styles */
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.2), transparent);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.section-divider::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: var(--bg-primary);
+  border: 1px solid var(--accent);
+  transform: rotate(45deg);
+  box-shadow: 0 0 10px rgba(56,189,248,0.5);
+  position: absolute;
+}
+
 .section {
   padding: 100px 0;
   position: relative;

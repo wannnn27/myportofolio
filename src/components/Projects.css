@@ -799,7 +799,8 @@
 @media (max-width: 768px) {
     .ps__tabs { flex-direction: column; }
     .ps__grid { grid-template-columns: 1fr; }
-    .ps__wrap, .dp__wrap { padding: 0 20px; }
+    .ps__grid--tech { grid-template-columns: 1fr; }
+    .ps__wrap, .dp__wrap { padding: 0 16px; }
     .dp__stats { width: 100%; justify-content: center; }
     .dp__ctas { flex-direction: column; }
     .dp__stat { padding: 16px 28px; }
