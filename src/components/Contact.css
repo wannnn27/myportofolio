@@ -43,6 +43,8 @@
     overflow: hidden;
 }
 
+
+
 .contact-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
@@ -102,7 +104,7 @@
 .contact-details h4 {
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--gray-400);
+    color: var(--text-muted);
     margin-bottom: 4px;
 }
 
@@ -180,7 +182,7 @@
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--white);
+    border-color: var(--true-white);
     box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
 }
 
@@ -250,4 +252,11 @@
     .btn-full {
         padding: 14px 20px;
     }
+}
+
+/* Button Hover Override for Contact (No Blue) */
+.contact-form .btn-primary:hover {
+    background: var(--true-white) !important;
+    color: var(--bg-primary) !important;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1) !important;
 }

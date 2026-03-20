@@ -1,37 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  /* Dark Navy Theme */
+  /* Minimalist Gray & White Palette */
   --true-white: #FFFFFF;
-  --accent: #38bdf8; /* Sky Blue */
-  --accent-dark: #0ea5e9;
+  --light-gray: #D4D4D4;
+  --medium-gray: #B3B3B3;
+  --dark-bg: #2B2B2B;
+
+  --accent: var(--true-white);
+  --accent-dark: var(--light-gray);
+  --blue-hover: #38bdf8;
+  --blue-hover-glow: rgba(56, 189, 248, 0.4);
   
   /* Backgrounds */
-  --bg-primary: #080e1a; /* Dark Navy */
-  --bg-secondary: #0d1526; /* Card Background */
-  --bg-tertiary: #162032; /* Lighter Card */
+  --bg-primary: var(--dark-bg);
+  --bg-secondary: #212121;
+  --bg-tertiary: #333333;
   
   /* Texts */
-  --text-primary: #f1f5f9; /* Main Text */
-  --text-secondary: #64748b; /* Subtitle */
-  --text-muted: #475569; /* Muted */
-  --text-accent: #94a3b8; /* Accent Text */
+  --text-primary: var(--true-white);
+  --text-secondary: var(--light-gray);
+  --text-muted: var(--medium-gray);
+  --text-accent: var(--light-gray);
   
   /* Borders */
-  --border-light: rgba(255,255,255,0.07);
-  --border-medium: rgba(255,255,255,0.1);
-  --border-heavy: rgba(255,255,255,0.14);
+  --border-light: rgba(255, 255, 255, 0.05);
+  --border-medium: rgba(255, 255, 255, 0.1);
+  --border-heavy: rgba(255, 255, 255, 0.15);
   
   /* Gradients */
-  --gradient-accent: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
-  --gradient-bg: linear-gradient(180deg, #080e1a 0%, #0d1526 100%);
-  --gradient-glow: radial-gradient(ellipse at center, rgba(56,189,248,0.15) 0%, transparent 60%);
+  --gradient-accent: linear-gradient(135deg, #FFFFFF 0%, #D4D4D4 100%);
+  --gradient-bg: linear-gradient(180deg, #2B2B2B 0%, #1F1F1F 100%);
+  --gradient-glow: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.05) 0%, transparent 60%);
 
   /* Shadows */
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
-  --shadow-accent: 0 4px 20px rgba(56,189,248,0.25);
+  --shadow-accent: 0 4px 20px rgba(255, 255, 255, 0.08);
 
   /* Typography */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -120,19 +126,21 @@ img {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-accent);
-  background: var(--accent-dark);
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.2);
+  background: var(--blue-hover);
+  color: var(--bg-primary);
 }
 
 .btn-secondary {
   background: transparent;
-  color: var(--accent);
+  color: var(--white);
   border: 1px solid var(--border-medium);
 }
 
 .btn-secondary:hover {
-  background: var(--accent);
+  background: var(--blue-hover);
   color: var(--bg-primary);
+  border-color: var(--blue-hover);
   transform: translateY(-2px);
 }
 
@@ -145,7 +153,7 @@ img {
 .section-divider {
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
   position: relative;
   display: flex;
   justify-content: center;
@@ -160,7 +168,7 @@ img {
   background: var(--bg-primary);
   border: 1px solid var(--accent);
   transform: rotate(45deg);
-  box-shadow: 0 0 10px rgba(56,189,248,0.5);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
   position: absolute;
 }
 
@@ -199,8 +207,8 @@ img {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(56,189,248,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(56,189,248,0.04) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 48px 48px;
   pointer-events: none;
 }
@@ -264,16 +272,12 @@ img {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--dark-800);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--mint-600);
+  background: var(--medium-gray);
   border-radius: var(--radius-full);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--mint-500);
+  background: var(--light-gray);
 }
 
 /* Animations */

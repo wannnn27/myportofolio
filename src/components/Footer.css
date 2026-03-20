@@ -67,9 +67,9 @@
 }
 
 .footer-social .social-links a:hover {
-    color: var(--white);
+    color: var(--true-white);
     transform: translateY(-4px);
-    box-shadow: var(--shadow-mint);
+    box-shadow: var(--shadow-accent);
 }
 
 .footer-social .social-links a.github:hover {

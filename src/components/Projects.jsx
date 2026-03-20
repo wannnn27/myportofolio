@@ -111,7 +111,7 @@ const projects = [
 ];
 
 const certificates = [
-    { id: 1,  title: 'Juara 3 National Essay Competition', issuer: 'National Essay Competition', year: '2025', image: sertifJuara },
+    { id: 1,  title: 'Juara 3 National Essay Competition', issuer: 'UIN Sunan Gunung Djati', year: '2025', image: sertifJuara },
     { id: 2,  title: 'Python Programming',                 issuer: 'Dicoding',                   year: '2025', image: sertifPythonDicoding },
     { id: 3,  title: 'Machine Learning',                   issuer: 'Dicoding',                   year: '2025', image: sertifMachineLearning },
     { id: 4,  title: 'Dasar AI',                           issuer: 'Dicoding',                   year: '2024', image: sertifDasarAI },

@@ -20,7 +20,7 @@ const About = () => {
                 <div className="about-content-wrapper">
                     <div className="about-text-area">
                         <p className="description-text">
-                            Seorang mahasiswa Sistem Informasi yang memiliki ketertarikan besar pada
+                            Mahasiswa Sistem Informasi yang memiliki ketertarikan besar pada
                             bidang pengembangan Machine Learning. Saya berfokus pada menciptakan
                             solusi analitik yang menarik dan selalu berusaha mengolah data menjadi
                             informasi bermakna dalam setiap proyek.
