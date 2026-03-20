@@ -368,10 +368,14 @@
 
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 968px) {
+    .about-top-header {
+        margin-bottom: 32px;
+    }
+    
     .about-content-wrapper {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 48px;
+        gap: 32px;
     }
 
     .about-text-area {
@@ -382,7 +386,10 @@
     .description-text { text-align: center; }
     .about-quote { text-align: left; }
     .about-action-btns { justify-content: center; }
-    .about-image-area { order: 1; }
+    .about-image-area { 
+        order: 1; 
+        padding-top: 5px;
+    }
     .about-image-area::before { width: 320px; height: 320px; }
     .about-image-area::after  { width: 270px; height: 270px; }
 }
