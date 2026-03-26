@@ -5,6 +5,7 @@ import sastrafyImg from '../assets/images/image-project/Sastrafy.png';
 import factifyImg from '../assets/images/image-project/Factify.png';
 import foodRecImg from '../assets/images/image-project/food-recomendation.png';
 import telcoChurnImg from '../assets/images/image-project/telco_churn.png';
+import bookstoreImg from '../assets/images/BookStore.png';
 
 // Certificate images
 import sertifJuara from '../assets/images/sertifikat/juara.jpeg';
@@ -28,6 +29,22 @@ import jupyterLogo from '../assets/images/icon-tech/jupyter.png';
 import streamlitLogo from '../assets/images/icon-tech/streamlit.png';
 
 const projects = [
+    {
+        id: 16,
+        title: 'One-Book',
+        category: 'Web App',
+        categoryKey: 'web',
+        description: 'Platform e-commerce buku modern yang menawarkan pengalaman berbelanja yang mulus, sistem manajemen inventaris, dan integrasi pembayaran yang aman untuk pecinta literatur.',
+        tech: ['React', 'Node.js', 'Express', 'PostgreSQL'],
+        image: bookstoreImg,
+        demo: 'https://1-book.vercel.app/',
+        github: 'https://github.com/wannnn27/BookStore',
+        features: [
+            'E-Commerce Lengkap: Katalog interaktif, manajemen keranjang belanja, dan sistem checkout yang mulus.',
+            'Keamanan Autentikasi: Fitur login/registrasi aman dengan hashing password (bcrypt) dan validasi real-time.',
+            'UI/UX Premium & Responsif: Desain modern (light-mode) yang ringan, animasi dinamis, serta kompatibel di semua ukuran layar.'
+        ]
+    },
     {
         id: 11,
         title: 'Semarang Resto Dashboard',
