@@ -4,7 +4,7 @@ import edaDatmin from '../assets/images/image-project/EDA_datmin.png';
 import sastrafyImg from '../assets/images/image-project/Sastrafy.png';
 import factifyImg from '../assets/images/image-project/Factify.png';
 import foodRecImg from '../assets/images/image-project/food-recomendation.png';
-import telcoChurnImg from '../assets/images/image-project/telco_churn.png';
+import telcoChurnImg from '../assets/images/telco.png';
 import bookstoreImg from '../assets/images/BookStore.png';
 
 // Certificate images
