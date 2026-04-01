@@ -174,6 +174,7 @@ const IChev   = () => <svg width="13" height="13" viewBox="0 0 24 24" fill="none
 ══════════════════════════════════════════════ */
 const Projects = ({ onSelectProject }) => {
     const [activeTab, setActiveTab] = useState('projects');
+    const [projectFilter, setProjectFilter] = useState('All');
 
     return (
         <section className="ps" id="projects">
@@ -185,8 +186,8 @@ const Projects = ({ onSelectProject }) => {
                     <span className="ps__eyebrow">— What I've Built</span>
                     <h2 className="ps__title">Portfolio Showcase</h2>
                     <p className="ps__sub">
-                        Explore my journey through projects, certifications, and technical expertise.
-                        Each section represents a milestone in my continuous learning path.
+                        Jelajahi perjalanan saya melalui proyek, sertifikasi, dan keahlian teknis. 
+                        Setiap bagian mewakili tonggak penting dalam jalur pembelajaran berkelanjutan saya.
                     </p>
                 </div>
 
@@ -207,10 +208,39 @@ const Projects = ({ onSelectProject }) => {
 
                 {/* ── Projects ── */}
                 {activeTab === 'projects' && (
-                    <div className="ps__grid">
-                        {projects.map((p, idx) => {
-                            const c = catStyle[p.categoryKey] || catStyle.ml;
-                            return (
+                    <>
+                        <div className="ps__filter" style={{ 
+                            display: 'flex', 
+                            justifyContent: 'center', 
+                            gap: '8px', 
+                            flexWrap: 'wrap',
+                            background: 'var(--bg-secondary)',
+                            border: '1px solid rgba(255,255,255,0.06)',
+                            borderRadius: '14px',
+                            padding: '6px',
+                            width: 'fit-content',
+                            margin: '0 auto 40px auto'
+                        }}>
+                            {['All', 'Web', 'Machine Learning', 'App'].map(cat => (
+                                <button 
+                                    key={cat}
+                                    className={`ps__filter-btn ${projectFilter === cat ? 'ps__filter-btn--on' : ''}`}
+                                    onClick={() => setProjectFilter(cat)}
+                                >
+                                    {cat}
+                                </button>
+                            ))}
+                        </div>
+                        <div className="ps__grid">
+                            {projects.filter(p => {
+                                if (projectFilter === 'All') return true;
+                                if (projectFilter === 'Web' && p.categoryKey === 'web') return true;
+                                if (projectFilter === 'Machine Learning' && (p.categoryKey === 'ml' || p.categoryKey === 'mining')) return true;
+                                if (projectFilter === 'App' && p.categoryKey === 'apps') return true;
+                                return false;
+                            }).map((p, idx) => {
+                                const c = catStyle[p.categoryKey] || catStyle.ml;
+                                return (
                                 <article className="pc" key={p.id} style={{ animationDelay: `${idx * 0.07}s` }}>
                                     <div className="pc__img-wrap">
                                         {p.image
@@ -251,6 +281,7 @@ const Projects = ({ onSelectProject }) => {
                             );
                         })}
                     </div>
+                    </>
                 )}
 
                 {/* ── Certificates ── */}
