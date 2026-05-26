@@ -101,7 +101,7 @@ const Contact = () => {
                 id="contact-name"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                placeholder="John Doe"
+                placeholder="Adi Arwan Syah"
                 required
                 autoComplete="name"
               />
@@ -114,7 +114,7 @@ const Contact = () => {
                 id="contact-email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                placeholder="john@example.com"
+                placeholder="adiarwanexample@gamail.com"
                 required
                 autoComplete="email"
               />

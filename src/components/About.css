@@ -173,9 +173,9 @@
   }
   
   .about-cutout-img {
-    max-width: 350px;
+    max-width: 400px;
     min-width: auto;
-    transform: scale(1.1);
+    transform: scale(1.4);
     mask-image: none;
     -webkit-mask-image: none;
   }
@@ -196,9 +196,9 @@
     font-size: 1.8rem;
   }
   .about-cutout-img {
-    transform: scale(1);
+    transform: scale(1.7);
     max-width: 100%;
-    margin-top: -20px;
+    margin-top: 10px;
   }
 }
 
