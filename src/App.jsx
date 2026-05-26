@@ -2,11 +2,13 @@ import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import TechMarquee from './components/TechMarquee';
 import Projects from './components/Projects';
 import ProjectDetail from './components/Projectdetail';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
+import Preloader from './components/Preloader';
 
 function App() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -27,14 +29,13 @@ function App() {
 
   return (
     <>
+      <Preloader />
       <Navbar />
       <main>
         <Hero />
-        <div className="section-divider"></div>
         <About />
-        <div className="section-divider"></div>
+        <TechMarquee />
         <Projects onSelectProject={setSelectedProject} />
-        <div className="section-divider"></div>
         <Contact />
       </main>
       <Footer />
