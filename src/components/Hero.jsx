@@ -52,7 +52,7 @@ const Hero = () => {
           </h1>
 
           <p className="hero-description">
-            Mahasiswa Sistem Informasi yang berfokus pada pengembangan perangkat lunak, dengan minat pada software engineering.
+            Mahasiswa Sistem Informasi dengan minat pada software engineering.
           </p>
 
           <div className="hero-mantra">
