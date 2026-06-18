@@ -387,7 +387,8 @@
   }
 
   .hero-buttons,
-  .hero-stats {
+  .hero-stats,
+  .hero-mantra-links {
     justify-content: center;
   }
 }
