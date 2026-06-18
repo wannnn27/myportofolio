@@ -227,7 +227,7 @@ const Projects = ({ onSelectProject }) => {
         {/* ── Projects ── */}
         {activeTab === 'projects' && (
           <>
-            <div className="ps__filter-wrap" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
+            <div className="ps__filter-wrap" style={{ display: 'flex', justifyContent: 'center', marginBottom: '24px' }}>
               <div className="ps__filter" style={{ marginBottom: 0 }}>
                 {['All', 'Web', 'ML', 'Mobile'].map(cat => (
                   <button
@@ -239,73 +239,86 @@ const Projects = ({ onSelectProject }) => {
                   </button>
                 ))}
               </div>
-              <div className="ps__controls" style={{ marginBottom: 0 }}>
-                <button onClick={scrollLeft} className="ps__scroll-btn" aria-label="Scroll left">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 18l-6-6 6-6" /></svg>
-                </button>
-                <button onClick={scrollRight} className="ps__scroll-btn" aria-label="Scroll right">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18l6-6-6-6" /></svg>
-                </button>
-              </div>
             </div>
 
-            <div className="ps__grid" ref={scrollRef}>
-              {filteredProjects.map((p, idx) => {
-                const c = catStyle[p.categoryKey] || ACCENT;
-                return (
-                  <article
-                    className="pc"
-                    key={p.id}
-                    style={{ animationDelay: `${idx * 0.06}s` }}
-                  >
-                    <div className="pc__img-wrap">
-                      {p.image
-                        ? <img src={p.image} alt={p.title} className="pc__img" />
-                        : <div className="pc__no-img" />
-                      }
-                    </div>
-
-                    <div className="pc__body">
-                      <span
-                        className="pc__badge"
-                        style={{ color: c.color, background: c.bg, border: `1px solid ${c.border}` }}
-                      >
-                        {p.category}
-                      </span>
-                      <h3 className="pc__title">{p.title}</h3>
-                      <p className="pc__desc">
-                        {p.description.length > 110 ? p.description.slice(0, 110) + '…' : p.description}
-                      </p>
-
-                      <div className="pc__chips">
-                        {p.tech.slice(0, 3).map((t, i) => (
-                          <span key={i} className="pc__chip">{t}</span>
-                        ))}
-                        {p.tech.length > 3 && (
-                          <span className="pc__chip pc__chip--more">+{p.tech.length - 3}</span>
-                        )}
-                      </div>
-
-                      <div className="pc__foot">
-                        <a
-                          href={p.demo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="pc__demo"
+            <div className="ps__marquee-wrapper">
+              <div 
+                className="ps__marquee-track" 
+                style={{ animationDuration: `${Math.max(filteredProjects.length * 8, 20)}s` }}
+              >
+                {[0, 1].map(i => (
+                  <div className="ps__marquee-content" key={i} aria-hidden={i === 1}>
+                    {filteredProjects.map((p, idx) => {
+                      const c = catStyle[p.categoryKey] || ACCENT;
+                      return (
+                        <article
+                          className="pc pc--project"
+                          key={p.id ? `${p.id}-${i}` : idx}
+                          style={{ animationDelay: `${idx * 0.06}s` }}
                         >
-                          Live Demo <ILink />
-                        </a>
-                        <button
-                          className="pc__det"
-                          onClick={() => onSelectProject(p)}
-                        >
-                          Details <IArrowR />
-                        </button>
-                      </div>
-                    </div>
-                  </article>
-                );
-              })}
+                          <div
+                            className="pc__img-wrap"
+                            style={{
+                              background: `radial-gradient(circle at center, ${c.bg} 0%, var(--bg-card) 100%)`
+                            }}
+                          >
+                            {p.image ? (
+                              <div className="pc__frame">
+                                <div className="pc__frame-dots">
+                                  <span className="pc__frame-dot pc__frame-dot--red" />
+                                  <span className="pc__frame-dot pc__frame-dot--yellow" />
+                                  <span className="pc__frame-dot pc__frame-dot--green" />
+                                </div>
+                                <div className="pc__frame-img">
+                                  <img src={p.image} alt={p.title} className="pc__img" />
+                                </div>
+                              </div>
+                            ) : (
+                              <div className="pc__no-img" />
+                            )}
+                          </div>
+
+                          <div className="pc__body">
+                            <span
+                              className="pc__badge"
+                              style={{ color: c.color, background: c.bg, border: `1px solid ${c.border}` }}
+                            >
+                              {p.category}
+                            </span>
+                            <h3 className="pc__title">{p.title}</h3>
+
+                            <div className="pc__chips">
+                              {p.tech.slice(0, 3).map((t, i) => (
+                                <span key={i} className="pc__chip">{t}</span>
+                              ))}
+                              {p.tech.length > 3 && (
+                                <span className="pc__chip pc__chip--more">+{p.tech.length - 3}</span>
+                              )}
+                            </div>
+
+                            <div className="pc__foot">
+                              <a
+                                href={p.demo}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="pc__demo"
+                              >
+                                Live Demo <ILink />
+                              </a>
+                              <button
+                                className="pc__det"
+                                onClick={() => onSelectProject(p)}
+                              >
+                                Details <IArrowR />
+                              </button>
+                            </div>
+                          </div>
+                        </article>
+                      );
+                    })}
+                  </div>
+                ))}
+              </div>
             </div>
           </>
         )}
