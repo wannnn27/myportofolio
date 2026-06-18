@@ -335,6 +335,8 @@
   .hero-side-info {
     max-width: 620px;
     justify-self: center;
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .hero-image-inner {
@@ -351,6 +353,14 @@
   .hero-buttons,
   .hero-stats {
     justify-content: center;
+  }
+}
+
+@media (hover: none) {
+  .hero-content,
+  .hero-side-info {
+    opacity: 1;
+    pointer-events: auto;
   }
 }
 

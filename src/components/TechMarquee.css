@@ -148,6 +148,10 @@
     padding: 52px var(--space-4);
   }
 
+  .growth-marquee {
+    margin: 0 calc(var(--space-4) * -1);
+  }
+
   .growth-card {
     padding: var(--space-5);
   }
