@@ -20,13 +20,7 @@ import sertifDasarAI from '../assets/images/sertifikat/dasar-ai.png';
 import sertifWeb from '../assets/images/sertifikat/web.png';
 
 // Tech stack icons
-import pythonLogo from '../assets/images/icon-tech/python.png';
-import tensorflowLogo from '../assets/images/icon-tech/tensorflow.png';
-import pytorchLogo from '../assets/images/icon-tech/pytorch.png';
-import scikitLearnLogo from '../assets/images/icon-tech/scikit-learn.png';
 import dockerLogo from '../assets/images/icon-tech/docker.png';
-import jupyterLogo from '../assets/images/icon-tech/jupyter.png';
-import streamlitLogo from '../assets/images/icon-tech/streamlit.png';
 
 const projects = [
   {

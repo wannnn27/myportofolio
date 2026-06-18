@@ -2,7 +2,7 @@ import './TechMarquee.css';
 
 const TechMarquee = () => {
   return (
-    <div className="tech-marquee-wrapper">
+    <div className="tech-marquee-wrapper" id="tech-stack">
       <div className="tech-marquee-track">
         {[0, 1].map((i) => (
           <div className="tech-marquee-content" key={i} aria-hidden={i === 1}>

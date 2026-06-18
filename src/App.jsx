@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import About from './components/About';
 import TechMarquee from './components/TechMarquee';
 import Projects from './components/Projects';
 import ProjectDetail from './components/Projectdetail';
+import Certificates from './components/Certificates';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
@@ -33,9 +33,9 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <About />
         <TechMarquee />
         <Projects onSelectProject={setSelectedProject} />
+        <Certificates />
         <Contact />
       </main>
       <Footer />

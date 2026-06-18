@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import './Certificates.css';
 
 // Import certificate images
@@ -8,7 +8,6 @@ import sertif1 from '../assets/images/sertifikat/sertif 1.png';
 import sertif2 from '../assets/images/sertifikat/sertif 2.png';
 import sertif3 from '../assets/images/sertifikat/sertif 3.png';
 import sertif4 from '../assets/images/sertifikat/sertif 4.png';
-import sertif6 from '../assets/images/sertifikat/sertif 6.png';
 import sertifBootcamp from '../assets/images/sertifikat/sertif-bootcamp.png';
 import sertifMachineLearning from '../assets/images/sertifikat/Machine-learning-dicoding.png';
 import sertifDasarAI from '../assets/images/sertifikat/dasar-ai.png';
