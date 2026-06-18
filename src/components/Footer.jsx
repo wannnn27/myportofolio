@@ -14,8 +14,7 @@ const Footer = () => {
               <span className="footer-logo-name">Adi Arwan Syah</span>
             </a>
             <p className="footer-tagline">
-              Information Systems student &amp; software engineer. Building things with code,
-              data, and a bit of curiosity.
+              Mahasiswa Sistem Informasi &amp; pengembang perangkat lunak. Mengembangkan inovasi melalui kode, data, dan rasa ingin tahu.
             </p>
           </div>
 
@@ -67,7 +66,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="footer-bottom">
           <p className="footer-copyright">
-            &copy; {year} Adi Arwan Syah. All rights reserved.
+            ~ Adi Arwan Syah ~
           </p>
         </div>
       </div>
