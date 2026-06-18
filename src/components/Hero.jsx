@@ -8,6 +8,46 @@ const phrases = [
   'Software Engineering',
 ];
 
+const celebrationPieces = [
+  { shape: 'dot', left: '8%', top: '44%', midX: '-30px', midY: '-58px', x: '-62px', y: '-106px', rotate: '-260deg', delay: '0s', color: '#2e87f6', scale: '0.9' },
+  { shape: 'rect', left: '18%', top: '30%', midX: '-20px', midY: '-72px', x: '-40px', y: '-122px', rotate: '180deg', delay: '0.08s', color: '#f35c2b', scale: '1.05' },
+  { shape: 'spark', left: '30%', top: '38%', midX: '-8px', midY: '-78px', x: '-18px', y: '-132px', rotate: '240deg', delay: '0.16s', color: '#f9eccc', scale: '1.1' },
+  { shape: 'line', left: '42%', top: '32%', midX: '8px', midY: '-82px', x: '16px', y: '-134px', rotate: '-140deg', delay: '0.04s', color: '#7bb6ff', scale: '0.95' },
+  { shape: 'dot', left: '54%', top: '36%', midX: '24px', midY: '-72px', x: '44px', y: '-118px', rotate: '-110deg', delay: '0.12s', color: '#22c55e', scale: '0.86' },
+  { shape: 'rect', left: '66%', top: '44%', midX: '42px', midY: '-56px', x: '78px', y: '-96px', rotate: '220deg', delay: '0.2s', color: '#f35c2b', scale: '1' },
+  { shape: 'spark', left: '76%', top: '38%', midX: '54px', midY: '-42px', x: '96px', y: '-74px', rotate: '-240deg', delay: '0.28s', color: '#f9eccc', scale: '0.92' },
+  { shape: 'dot', left: '20%', top: '58%', midX: '-30px', midY: '16px', x: '-62px', y: '44px', rotate: '130deg', delay: '0.34s', color: '#f9eccc', scale: '0.82' },
+  { shape: 'rect', left: '36%', top: '58%', midX: '-6px', midY: '30px', x: '-12px', y: '66px', rotate: '-180deg', delay: '0.42s', color: '#2e87f6', scale: '0.92' },
+  { shape: 'dot', left: '54%', top: '60%', midX: '20px', midY: '24px', x: '46px', y: '58px', rotate: '160deg', delay: '0.38s', color: '#22c55e', scale: '0.8' },
+  { shape: 'line', left: '68%', top: '56%', midX: '38px', midY: '12px', x: '72px', y: '32px', rotate: '-260deg', delay: '0.5s', color: '#7bb6ff', scale: '0.9' },
+  { shape: 'spark', left: '46%', top: '48%', midX: '2px', midY: '-22px', x: '4px', y: '-46px', rotate: '180deg', delay: '0.58s', color: '#f9eccc', scale: '0.74' },
+];
+
+const CelebrationBurst = ({ side }) => (
+  <div className={`hero-celebration hero-celebration--${side}`} aria-hidden="true">
+    <span className="celebration-glow" />
+    <span className="celebration-ring" />
+    {celebrationPieces.map((piece, index) => (
+      <span
+        key={`${side}-${piece.shape}-${index}`}
+        className={`celebration-piece celebration-piece--${piece.shape}`}
+        style={{
+          '--piece-color': piece.color,
+          '--piece-mid-x': piece.midX,
+          '--piece-mid-y': piece.midY,
+          '--piece-x': piece.x,
+          '--piece-y': piece.y,
+          '--piece-rotate': piece.rotate,
+          '--piece-delay': piece.delay,
+          '--piece-scale': piece.scale,
+          left: piece.left,
+          top: piece.top,
+        }}
+      />
+    ))}
+  </div>
+);
+
 const Hero = () => {
   const [typedText, setTypedText] = useState('');
   const [phraseIndex, setPhraseIndex] = useState(0);
@@ -40,12 +80,15 @@ const Hero = () => {
   return (
     <section className="hero" id="home">
       <div className="hero-ambient" aria-hidden="true" />
+      <div className="hero-bottom-haze" aria-hidden="true" />
 
       <div
         className={`hero-container ${isInfoVisible ? 'is-info-visible' : ''}`}
         onMouseLeave={() => setIsInfoVisible(false)}
       >
         <div className="hero-content">
+          <CelebrationBurst side="left" />
+
           <h1 className="hero-title">
             Hi, I'm{' '}
             <span className="name highlight">Adi Arwan Syah</span>
@@ -128,6 +171,8 @@ const Hero = () => {
         </div>
 
         <div className="hero-side-info">
+          <CelebrationBurst side="right" />
+
           <p className="hero-subtitle">
             Information Systems Student focused on{' '}
             <span className="typing-word">{typedText}</span>
