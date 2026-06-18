@@ -69,7 +69,6 @@ const Footer = () => {
           <p className="footer-copyright">
             &copy; {year} Adi Arwan Syah. All rights reserved.
           </p>
-          <span className="footer-built">Built with React + Vite</span>
         </div>
       </div>
     </footer>

@@ -177,14 +177,6 @@ button {
   margin-bottom: var(--space-4);
 }
 
-.section-label::before {
-  content: '';
-  display: inline-block;
-  width: 16px;
-  height: 1px;
-  background: var(--text-muted);
-}
-
 .section-title {
   font-size: clamp(2rem, 4vw, 2.75rem);
   font-weight: 700;
