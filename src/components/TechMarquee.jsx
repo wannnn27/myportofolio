@@ -1,3 +1,4 @@
+import { Card } from '@/components/ui/card';
 import './TechMarquee.css';
 
 const growthItems = [
@@ -9,7 +10,7 @@ const growthItems = [
   {
     number: '02',
     title: 'Build useful things',
-    text: 'Membangun web app, dashboard, dan produk digital yang rapi, responsif, dan mudah digunakan.',
+    text: 'Membangun produk digital yang fungsional, responsif, dan mudah digunakan.',
   },
   {
     number: '03',
@@ -32,7 +33,7 @@ const TechMarquee = () => {
         <div className="growth-marquee" aria-label="Growth principles">
           <div className="growth-track">
             {marqueeItems.map((item, index) => (
-              <article
+              <Card
                 className="growth-card"
                 key={`${item.number}-${index}`}
                 aria-hidden={index >= growthItems.length}
@@ -40,7 +41,7 @@ const TechMarquee = () => {
                 <span className="growth-number">{item.number}</span>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
-              </article>
+              </Card>
             ))}
           </div>
         </div>

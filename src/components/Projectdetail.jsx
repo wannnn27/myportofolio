@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 import './Projects.css';
 
 const catStyle = {
-  mining: { color: '#3b82f6', bg: 'rgba(59,130,246,0.1)', border: 'rgba(59,130,246,0.2)' },
-  web:    { color: '#3b82f6', bg: 'rgba(59,130,246,0.1)', border: 'rgba(59,130,246,0.2)' },
-  apps:   { color: '#3b82f6', bg: 'rgba(59,130,246,0.1)', border: 'rgba(59,130,246,0.2)' },
-  ml:     { color: '#3b82f6', bg: 'rgba(59,130,246,0.1)', border: 'rgba(59,130,246,0.2)' },
+  mining: { color: '#2e87f6', bg: 'rgba(46,135,246,0.12)', border: 'rgba(46,135,246,0.24)' },
+  web:    { color: '#2e87f6', bg: 'rgba(46,135,246,0.12)', border: 'rgba(46,135,246,0.24)' },
+  apps:   { color: '#2e87f6', bg: 'rgba(46,135,246,0.12)', border: 'rgba(46,135,246,0.24)' },
+  ml:     { color: '#2e87f6', bg: 'rgba(46,135,246,0.12)', border: 'rgba(46,135,246,0.24)' },
 };
 
 const ICode   = () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>;

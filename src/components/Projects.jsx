@@ -25,7 +25,7 @@ import dockerLogo from '../assets/images/icon-tech/docker.png';
 const projects = [
   {
     id: 16,
-    title: 'One-Book',
+    title: 'One Book',
     category: 'Web App',
     categoryKey: 'web',
     description: 'Platform e-commerce buku modern yang menawarkan pengalaman berbelanja yang mulus, sistem manajemen inventaris, dan integrasi pembayaran yang aman untuk pecinta literatur.',
@@ -148,7 +148,7 @@ const techStack = [
   { name: 'Git',          icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',             category: 'Version Control', desc: 'Distributed version control system for tracking source code changes.' },
 ];
 
-const ACCENT = { color: '#3b82f6', bg: 'rgba(59,130,246,0.1)', border: 'rgba(59,130,246,0.2)' };
+const ACCENT = { color: '#2e87f6', bg: 'rgba(46,135,246,0.12)', border: 'rgba(46,135,246,0.24)' };
 
 const catStyle = {
   mining: ACCENT,
@@ -204,7 +204,7 @@ const Projects = ({ onSelectProject }) => {
           <span className="ps__eyebrow">What I've Built</span>
           <h2 className="ps__title">Portfolio Showcase</h2>
           <p className="ps__sub">
-            Projects, certifications, and technical skills — each one a step forward in my engineering journey.
+            Projects, certifications, and technical skills, each one a step forward in my engineering journey.
           </p>
         </div>
 

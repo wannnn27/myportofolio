@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { Code2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import './Hero.css';
 import profilePhoto from '../assets/images/sertifikat/me-Photoroom.png';
 
@@ -50,8 +52,7 @@ const Hero = () => {
           </h1>
 
           <p className="hero-description">
-            Saya adalah mahasiswa Sistem Informasi yang sedang membangun arah
-            karier di dunia software engineering.
+            Mahasiswa Sistem Informasi yang berfokus pada pengembangan perangkat lunak, dengan minat pada software engineering.
           </p>
 
           <div className="hero-mantra">
@@ -134,30 +135,25 @@ const Hero = () => {
           </p>
 
           <p className="hero-description hero-side-description">
-            Saya memiliki keinginan untuk menjadi Software Engineer yang mampu
-            membuat produk digital yang rapi, berguna, dan mudah digunakan.
+            Berorientasi pada pengembangan solusi digital yang clean, scalable, dan user-friendly 
+            melalui pendekatan software engineering yang terstruktur.
           </p>
 
           <div className="hero-buttons">
-            <a href="#projects" className="btn btn-primary">
-              <svg
-                width="15"
-                height="15"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <polyline points="16 18 22 12 16 6" />
-                <polyline points="8 6 2 12 8 18" />
-              </svg>
-              View Projects
-            </a>
-            <a href="#contact" className="btn btn-secondary">
-              Get In Touch
-            </a>
+            <Button asChild size="lg" className="hero-action hero-action-primary">
+              <a href="#projects">
+                <Code2 size={16} strokeWidth={2.4} />
+                View Projects
+              </a>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="hero-action hero-action-secondary"
+            >
+              <a href="#contact">Get In Touch</a>
+            </Button>
           </div>
 
           <div className="hero-stats">
@@ -172,7 +168,7 @@ const Hero = () => {
             </div>
             <div className="hero-stat-sep" aria-hidden="true" />
             <div className="hero-stat">
-              UAD - Info. Systems
+              UAD Info. Systems
             </div>
           </div>
         </div>

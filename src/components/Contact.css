@@ -174,7 +174,7 @@
 .form-group textarea:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+  box-shadow: 0 0 0 3px rgba(46, 135, 246, 0.14);
 }
 
 /* ── Responsive ─────────────────────────────────────────────── */

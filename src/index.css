@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;1,14..32,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
 
 :root {
   /* ── Core Palette ───────────────────────────────────────── */
   --black:        #000000;
-  --true-white:   #ffffff;
+  --true-white:   #f9eccc;
 
   /* Backgrounds — near-black system like Vercel */
   --bg-primary:   #0a0a0a;
@@ -13,21 +14,21 @@
   --bg-hover:     #222222;
 
   /* Text */
-  --text-primary:   #f4f4f5;
-  --text-secondary: #a1a1aa;
-  --text-muted:     #52525b;
-  --text-accent:    #e4e4e7;
+  --text-primary:   #f9eccc;
+  --text-secondary: rgba(249, 236, 204, 0.74);
+  --text-muted:     rgba(249, 236, 204, 0.42);
+  --text-accent:    #f35c2b;
 
   /* Borders — very subtle, not distracting */
-  --border:       rgba(255, 255, 255, 0.08);
-  --border-light: rgba(255, 255, 255, 0.05);
-  --border-med:   rgba(255, 255, 255, 0.12);
-  --border-heavy: rgba(255, 255, 255, 0.18);
+  --border:       rgba(249, 236, 204, 0.1);
+  --border-light: rgba(249, 236, 204, 0.06);
+  --border-med:   rgba(249, 236, 204, 0.16);
+  --border-heavy: rgba(249, 236, 204, 0.24);
 
   /* Accent — professional blue, not neon */
-  --accent:       #3b82f6;
-  --accent-dim:   rgba(59, 130, 246, 0.12);
-  --accent-hover: #60a5fa;
+  --accent:       #2e87f6;
+  --accent-dim:   rgba(46, 135, 246, 0.14);
+  --accent-hover: #f35c2b;
 
   /* Semantic — subtle, used sparingly */
   --green:        #22c55e;
@@ -71,6 +72,31 @@
   --ease-out:     cubic-bezier(0.0, 0.0, 0.2, 1);
   --transition:   0.2s var(--ease);
   --transition-slow: 0.4s var(--ease);
+}
+
+@theme inline {
+  --color-background: var(--bg-primary);
+  --color-foreground: var(--text-primary);
+  --color-card: var(--bg-card);
+  --color-card-foreground: var(--text-primary);
+  --color-popover: var(--bg-elevated);
+  --color-popover-foreground: var(--text-primary);
+  --color-primary: var(--accent);
+  --color-primary-foreground: var(--bg-primary);
+  --color-secondary: var(--bg-elevated);
+  --color-secondary-foreground: var(--text-primary);
+  --color-muted: var(--bg-card);
+  --color-muted-foreground: var(--text-muted);
+  --color-accent: var(--accent-dim);
+  --color-accent-foreground: var(--text-primary);
+  --color-destructive: var(--accent-hover);
+  --color-border: var(--border-med);
+  --color-input: var(--border);
+  --color-ring: var(--accent);
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
 }
 
 /* ── Reset ──────────────────────────────────────────────────── */
