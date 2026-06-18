@@ -1,55 +1,160 @@
-.tech-marquee-wrapper {
-  width: 100%;
+.growth-strip {
+  position: relative;
   overflow: hidden;
-  padding: 60px 0;
-  background: var(--bg-primary); 
+  padding: 76px var(--space-6);
+  background:
+    radial-gradient(circle at 22% 18%, rgba(59, 130, 246, 0.12), transparent 32%),
+    radial-gradient(circle at 78% 70%, rgba(249, 115, 22, 0.08), transparent 34%),
+    linear-gradient(180deg, var(--bg-primary), #080b10 46%, var(--bg-primary));
   border-top: 1px solid var(--border-light);
   border-bottom: 1px solid var(--border-light);
 }
 
-.tech-marquee-track {
+.growth-strip::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.04), transparent),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 72px);
+  opacity: 0.7;
+  mask-image: linear-gradient(to bottom, transparent, black 18%, black 82%, transparent);
+}
+
+.growth-strip-inner {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 1160px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.6fr) 1fr;
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+}
+
+.growth-strip-heading {
+  max-width: 320px;
+}
+
+.growth-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: var(--space-4);
+  color: var(--accent-hover);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.growth-strip-heading h2 {
+  color: var(--text-primary);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.growth-marquee {
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.growth-track {
+  --growth-card-width: 280px;
   display: flex;
   width: max-content;
-  animation: techMarqueeAnim 35s linear infinite;
+  gap: var(--space-4);
+  animation: growthMarquee 24s linear infinite;
 }
 
-.tech-marquee-content {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  padding-right: 32px;
+.growth-card {
+  width: var(--growth-card-width);
+  flex: 0 0 var(--growth-card-width);
+  min-height: 210px;
+  padding: var(--space-6);
+  background: rgba(22, 22, 22, 0.68);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(14px);
 }
 
-.tech-marquee-content span {
-  font-family: var(--font);
-  font-size: 5rem;
-  font-weight: 900;
-  font-style: italic;
-  color: rgba(255, 255, 255, 0.04);
-  letter-spacing: 0.02em;
-  white-space: nowrap;
-  user-select: none;
+.growth-number {
+  display: inline-flex;
+  margin-bottom: var(--space-8);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
 }
 
-.tech-marquee-dot {
-  font-size: 2.5rem;
-  color: rgba(255, 255, 255, 0.04);
+.growth-card h3 {
+  margin-bottom: var(--space-3);
+  color: var(--text-primary);
+  font-size: 1rem;
+  line-height: 1.3;
 }
 
-@keyframes techMarqueeAnim {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+.growth-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
 }
 
-@media (max-width: 768px) {
-  .tech-marquee-wrapper { padding: 40px 0; }
-  .tech-marquee-content span { font-size: 3rem; }
-  .tech-marquee-dot { font-size: 1.5rem; }
+@keyframes growthMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - (var(--space-4) / 2)));
+  }
+}
+
+@media (max-width: 900px) {
+  .growth-strip {
+    padding: 64px var(--space-6);
+  }
+
+  .growth-strip-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .growth-strip-heading {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .growth-marquee {
+    margin: 0 calc(var(--space-6) * -1);
+  }
+
+  .growth-track {
+    --growth-card-width: min(320px, 78vw);
+    animation-duration: 28s;
+  }
+
+  .growth-card {
+    min-height: 190px;
+    text-align: left;
+  }
 }
 
 @media (max-width: 480px) {
-  .tech-marquee-wrapper { padding: 30px 0; }
-  .tech-marquee-content span { font-size: 2.2rem; }
-  .tech-marquee-dot { font-size: 1.2rem; gap: 16px; padding-right: 16px; }
-  .tech-marquee-content { gap: 16px; padding-right: 16px; }
+  .growth-strip {
+    padding: 52px var(--space-4);
+  }
+
+  .growth-card {
+    padding: var(--space-5);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .growth-track {
+    animation: none;
+  }
 }
