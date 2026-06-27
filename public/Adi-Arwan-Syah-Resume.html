@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adi Arwan Syah - Resume</title>
+  <meta name="description" content="Resume of Adi Arwan Syah, Information Systems student focused on software engineering, web development, dashboards, and AI-assisted products." />
+  <style>
+    :root {
+      --ink: #151515;
+      --muted: #5f6368;
+      --line: #e5e7eb;
+      --accent: #1f6feb;
+      --paper: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      color: var(--ink);
+      background: #f3f4f6;
+      line-height: 1.55;
+    }
+
+    .page {
+      width: min(100%, 920px);
+      margin: 32px auto;
+      padding: 56px;
+      background: var(--paper);
+      box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      gap: 32px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 2.35rem;
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .role {
+      margin: 0;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .summary {
+      max-width: 560px;
+      margin-top: 18px;
+      color: var(--muted);
+    }
+
+    .contact {
+      min-width: 230px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: right;
+    }
+
+    .contact a {
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    section {
+      padding: 28px 0 0;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      color: var(--ink);
+      font-size: 0.82rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .item {
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h3 {
+      margin: 0 0 4px;
+      font-size: 1rem;
+    }
+
+    .meta {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    li + li {
+      margin-top: 6px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skills span {
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 0.86rem;
+      color: var(--ink);
+      background: #f8fafc;
+    }
+
+    .print {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      padding: 10px 16px;
+      color: #fff;
+      background: var(--accent);
+      border: 0;
+      border-radius: 8px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page {
+        width: 100%;
+        margin: 0;
+        padding: 28px;
+        box-shadow: none;
+      }
+      .print { display: none; }
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        margin: 0;
+        padding: 32px 22px;
+      }
+      header,
+      .grid {
+        grid-template-columns: 1fr;
+        display: grid;
+      }
+      .contact {
+        min-width: 0;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div>
+        <h1>Adi Arwan Syah</h1>
+        <p class="role">Information Systems Student | Software Engineering Candidate</p>
+        <p class="summary">
+          Builder focused on responsive web apps, data dashboards, and AI-assisted products.
+          Comfortable working across React, Next.js, Python, Streamlit, Flutter, and ML prototypes.
+        </p>
+      </div>
+      <div class="contact">
+        <p><a href="mailto:arwansyah2787@gmail.com">arwansyah2787@gmail.com</a></p>
+        <p><a href="https://wa.me/6281515765980">+62 815-1576-5980</a></p>
+        <p><a href="https://github.com/wannnn27">github.com/wannnn27</a></p>
+        <p><a href="https://www.linkedin.com/in/adi-arwan-syah/">linkedin.com/in/adi-arwan-syah</a></p>
+      </div>
+    </header>
+
+    <section>
+      <h2>Selected Projects</h2>
+      <div class="grid">
+        <article class="item">
+          <h3>One Book</h3>
+          <p class="meta">Full-stack web app</p>
+          <p>E-commerce book platform with catalog, cart, checkout flow, authentication, and PostgreSQL-backed data structure.</p>
+        </article>
+        <article class="item">
+          <h3>Factify</h3>
+          <p class="meta">Mobile app and AI workflow</p>
+          <p>AI fact-checking app supporting text, URL, image, and video inputs with Flutter, Firebase, Flask, Gemini, and Hugging Face.</p>
+        </article>
+        <article class="item">
+          <h3>Sastrafy</h3>
+          <p class="meta">Frontend and AI integration</p>
+          <p>Modern Indonesian literature learning platform using Next.js, TypeScript, Tailwind CSS, and Gemini AI.</p>
+        </article>
+        <article class="item">
+          <h3>Semarang Resto Dashboard</h3>
+          <p class="meta">Data dashboard</p>
+          <p>Interactive EDA dashboard for restaurant ratings, prices, and cuisines using Python, Streamlit, Pandas, and Plotly.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="skills">
+        <span>React</span>
+        <span>Next.js</span>
+        <span>TypeScript</span>
+        <span>Node.js</span>
+        <span>Express</span>
+        <span>PostgreSQL</span>
+        <span>Python</span>
+        <span>Pandas</span>
+        <span>Scikit-Learn</span>
+        <span>XGBoost</span>
+        <span>Streamlit</span>
+        <span>Flutter</span>
+        <span>Firebase</span>
+        <span>Docker</span>
+        <span>Git</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education & Credentials</h2>
+      <div class="grid">
+        <article class="item">
+          <h3>Universitas Ahmad Dahlan</h3>
+          <p class="meta">Information Systems</p>
+          <p>Focus: software engineering, web systems, data products, and AI-assisted applications.</p>
+        </article>
+        <article class="item">
+          <h3>Certificates & Achievement</h3>
+          <p class="meta">10+ credentials</p>
+          <p>Includes Machine Learning, Python Programming, Web Programming, AI fundamentals, Microsoft cloud/AI credentials, and 3rd place in a national essay competition.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <button class="print" type="button" onclick="window.print()">Print / Save PDF</button>
+</body>
+</html>

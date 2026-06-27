@@ -22,9 +22,14 @@ const Footer = () => {
           <div className="footer-col">
             <h4>Navigation</h4>
             <ul>
-              <li><a href="#about">About</a></li>
+              <li><a href="#home">Home</a></li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="#contact">Contact</a></li>
+              <li>
+                <a href="/Adi-Arwan-Syah-Resume.html" target="_blank" rel="noopener noreferrer">
+                  Resume
+                </a>
+              </li>
             </ul>
           </div>
 

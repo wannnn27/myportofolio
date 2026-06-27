@@ -103,6 +103,10 @@
   flex-shrink: 0;
 }
 
+.nav-mobile-resume {
+  display: none;
+}
+
 .nav-resume {
   display: inline-flex;
   align-items: center;
@@ -173,6 +177,10 @@
 
   .nav-actions {
     display: none;
+  }
+
+  .nav-mobile-resume {
+    display: block;
   }
 
   .nav-menu {

@@ -55,6 +55,25 @@ const ProjectDetail = ({ project, onBack }) => {
             <div className="dp__accent" style={{ background: c.color }} />
             <p className="dp__desc">{project.description}</p>
 
+            <div className="dp__case">
+              <div className="dp__case-card">
+                <span>Role</span>
+                <p>{project.role}</p>
+              </div>
+              <div className="dp__case-card">
+                <span>Problem</span>
+                <p>{project.problem}</p>
+              </div>
+              <div className="dp__case-card">
+                <span>Approach</span>
+                <p>{project.solution}</p>
+              </div>
+              <div className="dp__case-card">
+                <span>Outcome</span>
+                <p>{project.outcome}</p>
+              </div>
+            </div>
+
             {/* Stats */}
             <div className="dp__stats">
               <div className="dp__stat">

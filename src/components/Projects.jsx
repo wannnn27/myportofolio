@@ -24,11 +24,34 @@ import dockerLogo from '../assets/images/icon-tech/docker.png';
 
 const projects = [
   {
+    id: 17,
+    title: 'SID',
+    category: 'Web App',
+    categoryKey: 'web',
+    description: 'Sistem Informasi Desa (SID). Platform untuk mengelola dan menyajikan informasi desa secara digital.',
+    role: 'Full-stack developer',
+    problem: 'Administrasi dan penyebaran informasi desa yang masih manual membutuhkan digitalisasi untuk efisiensi.',
+    solution: 'Membangun aplikasi web Sistem Informasi Desa yang interaktif dan mudah diakses oleh warga.',
+    outcome: 'Terciptanya platform digital yang mempermudah layanan dan akses informasi desa.',
+    tech: ['React', 'Next.js', 'Tailwind CSS'],
+    demo: 'https://sid-neon-sigma.vercel.app',
+    github: '',
+    features: [
+      'Portal informasi dan berita desa terkini.',
+      'Sistem administrasi persuratan digital.',
+      'Antarmuka modern dan responsif.',
+    ],
+  },
+  {
     id: 16,
     title: 'One Book',
     category: 'Web App',
     categoryKey: 'web',
     description: 'Platform e-commerce buku modern yang menawarkan pengalaman berbelanja yang mulus, sistem manajemen inventaris, dan integrasi pembayaran yang aman untuk pecinta literatur.',
+    role: 'Full-stack developer',
+    problem: 'Pembeli membutuhkan pengalaman membeli buku yang cepat, jelas, dan aman, sementara admin membutuhkan alur pengelolaan katalog yang mudah dipelihara.',
+    solution: 'Membangun e-commerce end-to-end dengan katalog, cart, checkout flow, autentikasi, dan struktur backend yang memisahkan data produk, user, dan transaksi.',
+    outcome: 'Menghasilkan prototype e-commerce yang dapat didemokan langsung, lengkap dengan user flow utama dan fondasi backend yang siap dikembangkan lebih lanjut.',
     tech: ['React', 'Node.js', 'Express', 'PostgreSQL'],
     image: bookstoreImg,
     demo: 'https://1-book.vercel.app/',
@@ -45,6 +68,10 @@ const projects = [
     category: 'Data Mining',
     categoryKey: 'mining',
     description: 'Dashboard Exploratory Data Analysis interaktif untuk data restoran di Semarang. Memvisualisasikan rating, rentang harga, dan jenis masakan dengan filter dinamis.',
+    role: 'Data analyst & dashboard developer',
+    problem: 'Data restoran sulit dibaca jika hanya berupa tabel, sehingga insight tentang rating, harga, lokasi, dan kategori makanan tidak langsung terlihat.',
+    solution: 'Mendesain dashboard Streamlit dengan filter interaktif, chart Plotly, dan struktur visual yang membantu pengguna mengeksplorasi pola restoran di Semarang.',
+    outcome: 'Membuat proses eksplorasi data lebih cepat dan mudah dipahami melalui visualisasi yang bisa digunakan langsung di browser.',
     tech: ['Python', 'Streamlit', 'Pandas', 'Plotly'],
     image: edaDatmin,
     demo: 'https://datmin-resto-rjdkzcpmymurxg8ckjhee2.streamlit.app/',
@@ -61,6 +88,10 @@ const projects = [
     category: 'Web App',
     categoryKey: 'web',
     description: 'Platform pembelajaran sastra Indonesia modern yang memadukan edukasi dan kreasi. Pengguna dapat mempelajari karya sastra klasik dan modern dengan bantuan Gemini AI.',
+    role: 'Frontend developer & AI integration',
+    problem: 'Materi sastra sering terasa pasif, padahal pengguna membutuhkan cara belajar yang lebih interaktif dan ruang untuk berlatih menulis.',
+    solution: 'Menggabungkan modul pembelajaran, pengalaman membaca yang nyaman, dan Gemini AI untuk membantu pengguna membuat puisi atau cerpen.',
+    outcome: 'Menyediakan platform edukasi sastra yang lebih engaging, responsif, dan dapat memperlihatkan integrasi AI dalam konteks pembelajaran.',
     tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Gemini AI'],
     image: sastrafyImg,
     demo: 'https://sastrafy.vercel.app/',
@@ -77,6 +108,10 @@ const projects = [
     category: 'Mobile App',
     categoryKey: 'apps',
     description: 'Aplikasi mobile verifikasi fakta berbasis AI dengan 4 metode input: teks, URL, gambar, dan video. Dilengkapi modul edukasi literasi digital untuk mengenali hoaks.',
+    role: 'Mobile developer & AI workflow designer',
+    problem: 'Pengguna membutuhkan cara cepat memeriksa informasi dari berbagai format, bukan hanya teks, terutama saat menghadapi misinformasi digital.',
+    solution: 'Mendesain flow verifikasi multi-input dengan Flutter, Firebase, Flask API, Gemini, dan model dari Hugging Face.',
+    outcome: 'Menghasilkan aplikasi edukatif yang menggabungkan deteksi informasi, reasoning AI, dan literasi digital dalam satu pengalaman mobile.',
     tech: ['Flutter', 'Firebase', 'Flask', 'Gemini', 'Hugging Face'],
     image: factifyImg,
     demo: 'https://factify-2b144.web.app',
@@ -93,6 +128,10 @@ const projects = [
     category: 'Machine Learning',
     categoryKey: 'ml',
     description: 'Sistem rekomendasi makanan cerdas berbasis AI yang menyesuaikan pilihan menu dengan berat badan, kebutuhan kalori, dan tujuan gaya hidup sehat pengguna.',
+    role: 'Machine learning developer',
+    problem: 'Rekomendasi makanan sering terlalu umum dan tidak mempertimbangkan profil kesehatan sederhana seperti kebutuhan kalori atau tujuan pengguna.',
+    solution: 'Membangun content-based filtering dengan kalkulasi BMR/TDEE dan UI Gradio agar pengguna bisa mencoba rekomendasi secara langsung.',
+    outcome: 'Menyediakan prototype rekomendasi makanan yang personal, mudah diuji, dan cocok sebagai contoh penerapan ML untuk kebutuhan sehari-hari.',
     tech: ['Python', 'Scikit-Learn', 'Pandas', 'Gradio'],
     image: foodRecImg,
     demo: 'https://huggingface.co/spaces/arwnsyh/food-recommendation-system',
@@ -109,6 +148,10 @@ const projects = [
     category: 'Machine Learning',
     categoryKey: 'ml',
     description: 'Proyek machine learning end-to-end untuk memprediksi pelanggan telekomunikasi yang berisiko churn. Mencakup EDA mendalam, feature engineering, dan model XGBoost.',
+    role: 'Machine learning analyst',
+    problem: 'Perusahaan telekomunikasi perlu memahami pelanggan berisiko churn agar strategi retensi dapat diarahkan ke faktor yang paling relevan.',
+    solution: 'Mengerjakan pipeline dari EDA, preprocessing, feature engineering, training XGBoost, sampai interpretasi faktor penting menggunakan feature importance.',
+    outcome: 'Membuat workflow analisis churn yang menjelaskan tidak hanya prediksi, tetapi juga alasan bisnis di balik risiko pelanggan.',
     tech: ['Python', 'Scikit-Learn', 'XGBoost', 'Pandas'],
     demo: 'https://github.com/wannnn27/Telco_Churn_Analisis',
     github: 'https://github.com/wannnn27/Telco_Churn_Analisis',
@@ -242,8 +285,8 @@ const Projects = ({ onSelectProject }) => {
             </div>
 
             <div className="ps__marquee-wrapper">
-              <div 
-                className="ps__marquee-track" 
+              <div
+                className="ps__marquee-track"
                 style={{ animationDuration: `${Math.max(filteredProjects.length * 8, 20)}s` }}
               >
                 {[0, 1].map(i => (
@@ -286,6 +329,7 @@ const Projects = ({ onSelectProject }) => {
                               {p.category}
                             </span>
                             <h3 className="pc__title">{p.title}</h3>
+                            <p className="pc__role">{p.role}</p>
 
                             <div className="pc__chips">
                               {p.tech.slice(0, 3).map((t, i) => (
@@ -309,7 +353,7 @@ const Projects = ({ onSelectProject }) => {
                                 className="pc__det"
                                 onClick={() => onSelectProject(p)}
                               >
-                                Details <IArrowR />
+                                Case Study <IArrowR />
                               </button>
                             </div>
                           </div>

@@ -10,6 +10,11 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const subject = encodeURIComponent(`Portfolio inquiry from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+    );
+    window.location.href = `mailto:arwansyah2787@gmail.com?subject=${subject}&body=${body}`;
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 3000);
     setFormData({ name: '', email: '', message: '' });
@@ -90,7 +95,7 @@ const Contact = () => {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
-                Message sent! I'll get back to you soon.
+                Opening your email client with the message ready to send.
               </div>
             )}
 
@@ -114,7 +119,7 @@ const Contact = () => {
                 id="contact-email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                placeholder="adiarwanexample@gamail.com"
+                placeholder="recruiter@example.com"
                 required
                 autoComplete="email"
               />

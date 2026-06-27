@@ -12,8 +12,15 @@ import Preloader from './components/Preloader';
 
 function App() {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [showInitialPreloader, setShowInitialPreloader] = useState(true);
+
+  const handleSelectProject = (project) => {
+    setShowInitialPreloader(false);
+    setSelectedProject(project);
+  };
 
   const handleBack = () => {
+    setShowInitialPreloader(false);
     setSelectedProject(null);
     setTimeout(() => {
       const projectsSection = document.getElementById('projects');
@@ -29,12 +36,12 @@ function App() {
 
   return (
     <>
-      <Preloader />
+      {showInitialPreloader && <Preloader />}
       <Navbar />
       <main>
         <Hero />
         <TechMarquee />
-        <Projects onSelectProject={setSelectedProject} />
+        <Projects onSelectProject={handleSelectProject} />
         <Certificates />
         <Contact />
       </main>
