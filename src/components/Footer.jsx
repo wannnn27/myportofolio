@@ -25,11 +25,11 @@ const Footer = () => {
               <li><a href="#home">Home</a></li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="#contact">Contact</a></li>
-              <li>
+              {/* <li>
                 <a href="/Adi-Arwan-Syah-Resume.html" target="_blank" rel="noopener noreferrer">
                   Resume
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 

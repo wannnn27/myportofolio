@@ -54,7 +54,7 @@ const Navbar = () => {
               </a>
             </li>
           ))}
-          <li className="nav-mobile-resume">
+          {/* <li className="nav-mobile-resume">
             <a
               href="/Adi-Arwan-Syah-Resume.html"
               target="_blank"
@@ -64,10 +64,10 @@ const Navbar = () => {
             >
               Resume
             </a>
-          </li>
+          </li> */}
         </ul>
 
-        <div className="nav-actions">
+        {/* <div className="nav-actions">
           <a
             href="/Adi-Arwan-Syah-Resume.html"
             target="_blank"
@@ -83,7 +83,7 @@ const Navbar = () => {
             </svg>
             Resume
           </a>
-        </div>
+        </div> */}
 
         <button
           className={`nav-toggle ${isOpen ? 'active' : ''}`}
