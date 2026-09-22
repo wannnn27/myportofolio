@@ -5,10 +5,13 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      setScrollProgress(scrollable > 0 ? Math.min((window.scrollY / scrollable) * 100, 100) : 0);
 
       const sections = ['home', 'projects', 'certificates', 'contact'];
       for (const section of sections) {
@@ -23,8 +26,21 @@ const Navbar = () => {
       }
     };
 
+    handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleEscape = (event) => {
+      if (event.key === 'Escape') setIsOpen(false);
+    };
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
   }, []);
 
   const navLinks = [
@@ -35,12 +51,14 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} aria-label="Main navigation">
       <div className="nav-container">
         <a href="#home" className="nav-logo" aria-label="Back to top">
           <span className="logo-monogram">AAS</span>
           <span className="logo-name">Adi Arwan Syah</span>
         </a>
+
+        <button className={`nav-backdrop ${isOpen ? 'active' : ''}`} type="button" onClick={() => setIsOpen(false)} aria-label="Close navigation menu" tabIndex={isOpen ? 0 : -1} />
 
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
           {navLinks.map(link => (
@@ -54,7 +72,7 @@ const Navbar = () => {
               </a>
             </li>
           ))}
-          {/* <li className="nav-mobile-resume">
+          <li className="nav-mobile-resume">
             <a
               href="/Adi-Arwan-Syah-Resume.html"
               target="_blank"
@@ -64,10 +82,10 @@ const Navbar = () => {
             >
               Resume
             </a>
-          </li> */}
+          </li>
         </ul>
 
-        {/* <div className="nav-actions">
+        <div className="nav-actions">
           <a
             href="/Adi-Arwan-Syah-Resume.html"
             target="_blank"
@@ -83,12 +101,12 @@ const Navbar = () => {
             </svg>
             Resume
           </a>
-        </div> */}
+        </div>
 
         <button
           className={`nav-toggle ${isOpen ? 'active' : ''}`}
           onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle navigation"
+          aria-label={isOpen ? 'Close navigation' : 'Open navigation'}
           aria-expanded={isOpen}
         >
           <span></span>
@@ -96,6 +114,7 @@ const Navbar = () => {
           <span></span>
         </button>
       </div>
+      <div className="nav-progress" aria-hidden="true"><span style={{ width: `${scrollProgress}%` }} /></div>
     </nav>
   );
 };

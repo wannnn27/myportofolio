@@ -150,6 +150,16 @@
   letter-spacing: 0.01em;
 }
 
+.form-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.form-label-row label { margin-bottom: var(--space-2); }
+.form-label-row span { margin-bottom: var(--space-2); color: var(--text-muted); font: 600 0.68rem var(--font-mono); }
+
 .form-group input,
 .form-group textarea {
   width: 100%;
@@ -175,6 +185,19 @@
   outline: none;
   border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(46, 135, 246, 0.14);
+}
+
+.form-group input[aria-invalid="true"],
+.form-group textarea[aria-invalid="true"] {
+  border-color: rgba(239, 68, 68, 0.72);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.form-error {
+  margin: 7px 0 0;
+  color: #fca5a5;
+  font-size: 0.75rem;
+  line-height: 1.45;
 }
 
 /* ── Responsive ─────────────────────────────────────────────── */

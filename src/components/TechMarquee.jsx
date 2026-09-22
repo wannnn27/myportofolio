@@ -20,25 +20,27 @@ const growthItems = [
 ];
 
 const TechMarquee = () => {
-  const marqueeItems = [...growthItems, ...growthItems];
-
   return (
     <section className="growth-strip" id="tech-stack" aria-label="Learning mindset">
+      <div className="growth-bridge" aria-hidden="true" />
       <div className="growth-strip-inner">
         <div className="growth-strip-heading">
           <span className="growth-eyebrow">Mindset</span>
           <h2>Learn. Build. Grow.</h2>
+          <p>Prinsip sederhana yang menjaga setiap proses tetap terarah, berguna, dan terus berkembang.</p>
         </div>
 
         <div className="growth-marquee" aria-label="Growth principles">
           <div className="growth-track">
-            {marqueeItems.map((item, index) => (
+            {growthItems.map((item) => (
               <Card
                 className="growth-card"
-                key={`${item.number}-${index}`}
-                aria-hidden={index >= growthItems.length}
+                key={item.number}
               >
-                <span className="growth-number">{item.number}</span>
+                <div className="growth-card-top">
+                  <span className="growth-number">{item.number}</span>
+                  <span className="growth-card-mark" aria-hidden="true" />
+                </div>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
               </Card>

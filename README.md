@@ -38,3 +38,13 @@ npm run build
 - `Certificates`: verified learning credentials.
 - `Contact`: email, WhatsApp, LinkedIn, and mailto-based inquiry form.
 - `Resume`: printable resume page in `public/Adi-Arwan-Syah-Resume.html`.
+
+## Search visibility
+
+Production domain: `https://adiarwnsyh.my.id/`, configured in the committed `.env.production` file. Hosting environment variables can override `SITE_URL`; remove any obsolete value there before deploying. After rebuilding and deploying, submit `https://adiarwnsyh.my.id/sitemap.xml` in Google Search Console. This configuration does not deploy the site or submit it to Google automatically.
+
+`npm run build` prerenders the homepage into HTML so its content and project links are available before JavaScript runs. Case studies have crawlable links and update their page title and description after loading.
+
+Set `SITE_URL` to your actual production HTTPS origin in your hosting environment (or `.env.production.local`) before building. For example, `SITE_URL=https://your-domain.com`. The build then creates `sitemap.xml`, adds its location to `robots.txt`, and generates absolute canonical and social image URLs. Without this setting, no production domain is invented and no sitemap is generated.
+
+After deployment, verify ownership in Google Search Console and submit `/sitemap.xml`. Indexing and rankings depend on Google; neither first position nor immediate indexing is guaranteed. Query-based case studies currently rely on JavaScript for their individual metadata; the prerendered HTML is the homepage.

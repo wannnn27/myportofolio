@@ -17,6 +17,7 @@
 }
 
 .nav-container {
+  position: relative;
   max-width: 1160px;
   margin: 0 auto;
   padding: 0 var(--space-6);
@@ -25,6 +26,14 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--space-8);
+}
+
+.nav-logo,
+.nav-menu,
+.nav-actions,
+.nav-toggle {
+  position: relative;
+  z-index: 1;
 }
 
 /* ── Logo ─────────────────────────────────────── */
@@ -169,6 +178,26 @@
   transform: translateY(-6.5px) rotate(-45deg);
 }
 
+.nav-progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.nav-progress span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), #7bb6ff, #f35c2b);
+  box-shadow: 0 0 12px rgba(46, 135, 246, 0.5);
+  transition: width 0.12s linear;
+}
+
+.nav-backdrop { display: none; }
+
 /* ── Mobile Menu ──────────────────────────────── */
 @media (max-width: 768px) {
   .nav-toggle {
@@ -203,6 +232,24 @@
     transform: translateY(-8px) scale(0.97);
     transition: all 0.25s var(--ease);
     transform-origin: top center;
+  }
+
+  .nav-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    display: block;
+    background: rgba(0, 0, 0, 0.48);
+    border: 0;
+    opacity: 0;
+    visibility: hidden;
+    backdrop-filter: blur(4px);
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+  }
+
+  .nav-backdrop.active {
+    opacity: 1;
+    visibility: visible;
   }
 
   .nav-menu.active {

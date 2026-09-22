@@ -6,6 +6,8 @@ import profilePhoto from '../assets/images/sertifikat/me-Photoroom.png';
 
 const phrases = [
   'Software Engineering',
+  'AI Product Development',
+  'Data & Machine Learning',
 ];
 
 const celebrationPieces = [
@@ -88,6 +90,8 @@ const Hero = () => {
       >
         <div className="hero-content">
           <CelebrationBurst side="left" />
+
+          <div className="hero-availability"><span /> Open to collaboration</div>
 
           <h1 className="hero-title">
             Hi, I'm{' '}
@@ -203,17 +207,18 @@ const Hero = () => {
 
           <div className="hero-stats">
             <div className="hero-stat">
-              <span className="hero-stat-num">5+</span>
+              <span className="hero-stat-num">9</span>
               Projects
             </div>
             <div className="hero-stat-sep" aria-hidden="true" />
             <div className="hero-stat">
-              <span className="hero-stat-num">10+</span>
+              <span className="hero-stat-num">11</span>
               Certificates
             </div>
             <div className="hero-stat-sep" aria-hidden="true" />
             <div className="hero-stat">
-              UAD Info. Systems
+              <span className="hero-stat-num">2×</span>
+              Competition Winner
             </div>
           </div>
         </div>

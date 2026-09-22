@@ -71,7 +71,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="footer-bottom">
           <p className="footer-copyright">
-            ~ Adi Arwan Syah ~
+            © {year} Adi Arwan Syah
           </p>
         </div>
       </div>

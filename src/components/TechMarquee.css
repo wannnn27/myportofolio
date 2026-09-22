@@ -1,13 +1,30 @@
 .growth-strip {
   position: relative;
-  overflow: hidden;
-  padding: 76px var(--space-6);
+  isolation: isolate;
+  overflow: visible;
+  padding: 104px var(--space-6) 96px;
   background:
-    radial-gradient(circle at 22% 18%, rgba(46, 135, 246, 0.13), transparent 32%),
-    radial-gradient(circle at 78% 70%, rgba(243, 92, 43, 0.1), transparent 34%),
-    linear-gradient(180deg, var(--bg-primary), #080b10 46%, var(--bg-primary));
-  border-top: 1px solid var(--border-light);
+    radial-gradient(circle at 18% 30%, rgba(46, 135, 246, 0.14), transparent 34%),
+    radial-gradient(circle at 82% 64%, rgba(243, 92, 43, 0.11), transparent 36%),
+    linear-gradient(180deg, #050505 0%, #07101a 28%, #080b10 62%, var(--bg-primary) 100%);
+  border-top: 0;
   border-bottom: 1px solid var(--border-light);
+}
+
+.growth-bridge {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  width: min(980px, 88vw);
+  height: 220px;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(249, 236, 204, 0.1), transparent 64%),
+    linear-gradient(90deg, transparent, rgba(46, 135, 246, 0.15), rgba(243, 92, 43, 0.12), transparent);
+  filter: blur(30px);
+  opacity: 0.8;
+  transform: translateX(-50%);
 }
 
 .growth-strip::before {
@@ -28,13 +45,20 @@
   width: min(100%, 1160px);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(220px, 0.6fr) 1fr;
-  gap: clamp(32px, 5vw, 72px);
+  grid-template-columns: minmax(230px, 0.58fr) minmax(0, 1.42fr);
+  gap: clamp(36px, 4vw, 60px);
   align-items: center;
 }
 
 .growth-strip-heading {
   max-width: 320px;
+}
+
+.growth-strip-heading > p {
+  margin-top: var(--space-5);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.75;
 }
 
 .growth-eyebrow {
@@ -58,33 +82,72 @@
 
 .growth-marquee {
   width: 100%;
-  overflow: hidden;
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  overflow: visible;
+  mask-image: none;
 }
 
 .growth-track {
-  --growth-card-width: 280px;
-  display: flex;
-  width: max-content;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 100%;
   gap: var(--space-4);
-  animation: growthMarquee 24s linear infinite;
+  animation: none;
+}
+
+.growth-track::before {
+  content: '';
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 28px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(46,135,246,0.42), rgba(249,236,204,0.2), rgba(243,92,43,0.42));
+  opacity: 0.6;
 }
 
 .growth-card {
-  width: var(--growth-card-width);
-  flex: 0 0 var(--growth-card-width);
-  min-height: 210px;
+  position: relative;
+  z-index: 1;
+  width: auto;
+  min-width: 0;
+  min-height: 238px;
   padding: var(--space-6);
-  background: rgba(22, 22, 22, 0.68);
+  background: linear-gradient(160deg, rgba(24, 27, 34, 0.92), rgba(14, 15, 19, 0.9));
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
   backdrop-filter: blur(14px);
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.growth-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-med);
+  box-shadow: 0 24px 52px rgba(0, 0, 0, 0.34);
+}
+
+.growth-card:nth-child(1) { border-top-color: rgba(46, 135, 246, 0.58); }
+.growth-card:nth-child(2) { border-top-color: rgba(249, 236, 204, 0.42); }
+.growth-card:nth-child(3) { border-top-color: rgba(243, 92, 43, 0.58); }
+
+.growth-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 54px;
+}
+
+.growth-card-mark {
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgba(46, 135, 246, 0.1), 0 0 18px rgba(46, 135, 246, 0.36);
 }
 
 .growth-number {
   display: inline-flex;
-  margin-bottom: var(--space-8);
   color: var(--text-muted);
   font-family: var(--font-mono);
   font-size: 0.76rem;
@@ -104,15 +167,6 @@
   line-height: 1.7;
 }
 
-@keyframes growthMarquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(calc(-50% - (var(--space-4) / 2)));
-  }
-}
-
 @media (max-width: 900px) {
   .growth-strip {
     padding: 64px var(--space-6);
@@ -129,12 +183,11 @@
   }
 
   .growth-marquee {
-    margin: 0 calc(var(--space-6) * -1);
+    margin: 0;
   }
 
   .growth-track {
-    --growth-card-width: min(320px, 78vw);
-    animation-duration: 28s;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .growth-card {
@@ -149,7 +202,7 @@
   }
 
   .growth-marquee {
-    margin: 0 calc(var(--space-4) * -1);
+    margin: 0;
   }
 
   .growth-card {
@@ -157,8 +210,17 @@
   }
 }
 
+@media (max-width: 720px) {
+  .growth-track { grid-template-columns: 1fr; }
+  .growth-track::before { display: none; }
+  .growth-card { min-height: 0; }
+  .growth-card-top { margin-bottom: var(--space-8); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .growth-track {
     animation: none;
   }
+
+  .growth-card:hover { transform: none; }
 }
